@@ -262,7 +262,7 @@ function About({ t }) {
     <section id="about" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={a.sectionNum} title={a.sectionTitle} />
       <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "5rem", alignItems: "start" }}>
-        <img src="./FF97B999-00D0-4C3B-9FA0-78ABAD7F21DA.JPEG" alt="Andrea Mili" style={{ width: "100%", maxWidth: "320px", display: "block", marginBottom: "2rem", border: "1px solid var(--line)" }} />
+        <img src="./foto.JPEG" alt="Andrea Mili" style={{ width: "100%", maxWidth: "320px", display: "block", marginBottom: "2rem", border: "1px solid var(--line)" }} />
         <div ref={ref1} style={{ opacity: v1 ? 1 : 0, transform: v1 ? "none" : "translateY(20px)", transition: "all 0.7s ease" }}>
           {a.paragraphs.map((p, i) => (
             <p key={i} style={{ fontSize: "1rem", color: "var(--ink-muted)", marginBottom: "1.2rem", lineHeight: 1.85 }}
