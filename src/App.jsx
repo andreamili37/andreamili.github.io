@@ -102,7 +102,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
         fontFamily: "var(--serif)", fontSize: "1.2rem", fontWeight: 400,
         letterSpacing: "0.04em", color: "var(--ink)", background: "none", border: "none", cursor: "pointer",
       }}>
-        Mario Rossi
+        Andrea Mili
       </button>
 
       {page === "home" && (
