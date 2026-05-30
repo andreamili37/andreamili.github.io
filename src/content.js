@@ -160,7 +160,7 @@ export const content = {
     contact: {
       sectionNum: "06",
       sectionTitle: "Contatti",
-      headline: ["Costruiamo qualcosa", "di", "importante", "insieme."],
+      headline: ["Entriamo in contatto.", "", "", ""],
       links: [
         { type: "email", label: "andreamili@protonmail.com", href: "mailto:andreamili@protonmail.com" },
         { type: "linkedin", label: "linkedin.com/in/andrea-mili/", href: "https://www.linkedin.com/in/andrea-mili/" },
@@ -340,7 +340,7 @@ export const content = {
     contact: {
       sectionNum: "06",
       sectionTitle: "Contact",
-      headline: ["Let's connect."],
+      headline: ["Let's connect.", "", "", ""],
       links: [
         { type: "email", label: "andreamili@protonmail.com", href: "mailto:andreamili@protonmail.com" },
         { type: "linkedin", label: "linkedin.com/in/andrea-mili/", href: "https://www.linkedin.com/in/andrea-mili/" },
