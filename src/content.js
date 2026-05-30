@@ -150,9 +150,9 @@ export const content = {
           note: "Percorso in Finanza Aziendale · Voto finale: 107/110",
         },
         {
-          year: "2020",
-          degree: "ESG Expert",
-          school: "FMVA® — Corporate Finance Institute",
+          year: "2023",
+          degree: "ESG Expert (EBS)",
+          school: "EBS University",
           note: "Certificazione professionale online",
         },
       ],
@@ -201,18 +201,18 @@ export const content = {
       paragraphs: [
         "I am an <strong>ESG and Sustainability Expert</strong> with a strong passion for data and building models that turn complex numbers into clear decisions. I have gained experience in M&A, company valuation and strategic planning.",
         "In my free time I am interested in <strong>data analysis</strong> and develop small tools to automate repetitive tasks. I enjoy combining analytical rigour and creativity to find elegant solutions to concrete problems.",
-        "While I decided to dedicate my professional career to empowering the sustainable transition of organisations, I dedicate a great part of my free time to literature, both by reading fiction and non-fiction masterpieces, as well as producing my own pieces of creative writing. Examples of my productions can be read in my Substack pages.",
+        "While I decided to dedicate my professional career to empowering the sustainable transition of organisations, I dedicate a great part of my free time to <strong>literature</strong>, both by reading fiction and non-fiction masterpieces, as well as producing my own pieces of creative writing. Examples of my productions can be read in my Substack pages.",
       ],
       facts: [
         { label: "Availability", value: "Immediate · Full-time" },
-        { label: "Location", value: "Munich, Germany · Open to relocation" },
-        { label: "Languages", value: "Italian (mothertongue) · English (full professional proficiency) · German (full professional proficiency) · Spanish (limited professional proficiency) · Portuguese (beginner) · Welsh (beginner)" },
+        { label: "Location", value: "Munich, Germany · Open to relocation in Europe and UK" },
+        { label: "Languages", value: "Italian (mother tongue) · English (full professional proficiency) · German (full professional proficiency) · Spanish (limited professional proficiency) · Portuguese (beginner) · Welsh (beginner)" },
         { label: "Interests", value: "Literature · Creative writing · Foreign languages and cultures" },
       ],
     },
     experience: {
       sectionNum: "02",
-      sectionTitle: "Experience",
+      sectionTitle: "Professional Experience",
       items: [
         {
           period: "Jan 2025 — Present",
@@ -227,7 +227,7 @@ export const content = {
           desc: "Participation in financial due diligence projects and support in drafting information memoranda. Client database management and periodic reporting.",
         },
         {
-          period: "May 2021 — Jun 2021",
+          period: "May 2021 — Jun 2022",
           role: "Environment, Health and Safety Officer",
           company: "Tata Consultancy Services · Munich, Germany",
           desc: "Curricular internship in the Corporate Finance division. Support in preparing pitch books and market comparables analysis.",
@@ -239,9 +239,9 @@ export const content = {
       sectionTitle: "Skills",
       groups: [
         {
-          title: "Finance & Analysis",
+          title: "ESG and Sustainability",
           items: [
-            { name: "Financial Modelling", pct: 95 },
+            { name: "ESG Regulations", pct: 95 },
             { name: "Valuation (DCF, Comps)", pct: 90 },
             { name: "M&A / Due Diligence", pct: 80 },
             { name: "Corporate Finance", pct: 85 },
@@ -251,17 +251,17 @@ export const content = {
           title: "Tools & Software",
           items: [
             { name: "Excel / VBA", pct: 95 },
-            { name: "PowerBI / Tableau", pct: 80 },
+            { name: "PowerBI", pct: 80 },
             { name: "Python (pandas, numpy)", pct: 70 },
-            { name: "Bloomberg / Refinitiv", pct: 75 },
+            { name: "Generative AI tools (Claude, Microsoft Copilot)", pct: 75 },
           ],
         },
         {
           title: "Soft Skills",
           items: [
             { name: "Problem Solving", pct: 95 },
-            { name: "Communication", pct: 85 },
-            { name: "Teamwork", pct: 90 },
+            { name: "Stakeholder Relationship Management", pct: 85 },
+            { name: "Storytelling", pct: 90 },
             { name: "Presentations", pct: 88 },
           ],
         },
@@ -315,19 +315,19 @@ export const content = {
           year: "2019 — 2022",
           degree: "MSc Politics and Technology",
           school: "Technical University of Munich· Germany",
-          note: "Thesis on Corporate Valuation in M&A contexts · 110/110",
+          note: "Thesis on Corporate Valuation in M&A contexts · Final Grade: 1.8",
         },
         {
           year: "2015 — 2019",
           degree: "BA Political and Administrative Sciences",
           school: "Università degli Studi di Trieste",
-          note: "Corporate Finance track · 107/110",
+          note: "Corporate Finance track · Final Grade: 107/110",
         },
         {
-          year: "2020",
-          degree: "Financial Modelling & Valuation",
-          school: "FMVA® — Corporate Finance Institute",
-          note: "Professional online certification",
+          year: "2023",
+          degree: "ESG Expert (EBS)",
+          school: "EBS University",
+          note: "Professional ESG certification",
         },
       ],
     },
@@ -343,7 +343,7 @@ export const content = {
     },
     footer: {
       left: "© 2026 Andrea Mili",
-      right: "Built with care · Munich, Germany",
+      right: "Buten un Binnen, Wagen un Winnen · Munich, Germany",
     },
     backToProjects: "← Back to projects",
   },
@@ -365,7 +365,7 @@ export const content = {
       cta: "Kontakt aufnehmen",
       stats: {
         years: { num: "4+", label: "Jahre Erfahrung" },
-        projects: { num: "12", label: "abgeschlossene Projekte" },
+        projects: { num: "20", label: "abgeschlossene Projekte" },
       },
       tags: ["ESG", "Nachhaltigkeit", "Compliance", "Excel / VBA", "Python", "PowerBI"],
     },
