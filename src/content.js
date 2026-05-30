@@ -168,13 +168,13 @@ export const content = {
       headline: ["Costruiamo qualcosa", "di", "importante", "insieme."],
       links: [
         { type: "email", label: "mario.rossi@email.com", href: "mailto:mario.rossi@email.com" },
-        { type: "linkedin", label: "linkedin.com/in/mario-rossi", href: "https://linkedin.com/in/mario-rossi" },
+        { type: "linkedin", label: "linkedin.com/in/andrea-mili/", href: "https://www.linkedin.com/in/andrea-mili/" },
         { type: "phone", label: "+39 333 123 4567", href: "tel:+393331234567" },
       ],
     },
     footer: {
-      left: "© 2026 Mario Rossi",
-      right: "Costruito con cura · Milano, Italia",
+      left: "© 2026 Andrea Mili",
+      right: "Costruito con cura · Monaco di Baviera, Germania",
     },
     backToProjects: "← Torna ai progetti",
   },
@@ -348,7 +348,7 @@ export const content = {
       headline: ["Let's connect."],
       links: [
         { type: "email", label: "mario.rossi@email.com", href: "mailto:mario.rossi@email.com" },
-        { type: "linkedin", label: "linkedin.com/in/mario-rossi", href: "https://linkedin.com/in/mario-rossi" },
+        { type: "linkedin", label: "linkedin.com/in/andrea-mili/", href: "https://www.linkedin.com/in/andrea-mili/" },
         { type: "phone", label: "+39 333 123 4567", href: "tel:+393331234567" },
       ],
     },
@@ -528,13 +528,13 @@ export const content = {
       headline: ["Lassen Sie uns etwas", "", "Bedeutendes", "gemeinsam aufbauen."],
       links: [
         { type: "email", label: "mario.rossi@email.com", href: "mailto:mario.rossi@email.com" },
-        { type: "linkedin", label: "linkedin.com/in/mario-rossi", href: "https://linkedin.com/in/mario-rossi" },
+        { type: "linkedin", label: "linkedin.com/in/andrea-mili/", href: "https://www.linkedin.com/in/andrea-mili/" },
         { type: "phone", label: "+39 333 123 4567", href: "tel:+393331234567" },
       ],
     },
     footer: {
-      left: "© 2026 Mario Rossi",
-      right: "Mit Sorgfalt gebaut · Mailand, Italien",
+      left: "© 2026 Andrea Mili",
+      right: "Mit Sorgfalt gebaut · München, Deutschland",
     },
     backToProjects: "← Zurück zu den Projekten",
   },
