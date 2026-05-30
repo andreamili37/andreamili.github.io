@@ -124,7 +124,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
       )}
 
       <div style={{ display: "flex", gap: "0.4rem" }}>
-        {["it", "en", "de"].map(l => (
+        {["en", "de", "it"].map(l => (
           <button key={l} onClick={() => setLang(l)} style={{
             padding: "0.3rem 0.65rem",
             border: `1px solid ${lang === l ? "var(--accent)" : "var(--line)"}`,
@@ -606,7 +606,7 @@ function Footer({ t }) {
 
 // ── APP ───────────────────────────────────────────────────────────────────────
 export default function App() {
-  const [lang, setLang] = useState("it");
+  const [lang, setLang] = useState("en");
   const [page, setPage] = useState("home");
   const [currentProject, setCurrentProject] = useState(null);
   const t = content[lang];
