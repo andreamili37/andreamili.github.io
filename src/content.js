@@ -345,7 +345,7 @@ export const content = {
     contact: {
       sectionNum: "06",
       sectionTitle: "Contact",
-      headline: ["Let's build something", " ", "remarkable", "together."],
+      headline: ["Let's connect."],
       links: [
         { type: "email", label: "mario.rossi@email.com", href: "mailto:mario.rossi@email.com" },
         { type: "linkedin", label: "linkedin.com/in/mario-rossi", href: "https://linkedin.com/in/mario-rossi" },
