@@ -201,7 +201,7 @@ export const content = {
       paragraphs: [
         "I am an <strong>ESG and Sustainability Expert</strong> with a strong passion for data and building models that turn complex numbers into clear decisions. I have gained experience in M&A, company valuation and strategic planning.",
         "In my free time I am interested in <strong>data analysis</strong> and develop small tools to automate repetitive tasks. I enjoy combining analytical rigour and creativity to find elegant solutions to concrete problems.",
-        "I am looking for new challenges in dynamic environments where I can grow, contribute and keep learning every day.",
+        "While I decided to dedicate my professional career to empowering the sustainable transition of organisations, I dedicate a great part of my free time to literature, both by reading fiction and non-fiction masterpieces, as well as producing my own pieces of creative writing. Examples of my productions can be read in my Substack pages.",
       ],
       facts: [
         { label: "Availability", value: "Immediate · Full-time" },
