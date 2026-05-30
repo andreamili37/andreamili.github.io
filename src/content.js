@@ -10,8 +10,8 @@ export const content = {
     },
     hero: {
       label: "Portfolio · CV Interattivo",
-      name: "Mario",
-      surname: "Rossi",
+      name: "Andrea",
+      surname: "Mili",
       role: "Finance & Strategy Analyst · Milano",
       cta: "Contattami",
       stats: {
@@ -317,16 +317,16 @@ export const content = {
       sectionTitle: "Education",
       items: [
         {
-          year: "2019 — 2021",
-          degree: "MSc Finance",
-          school: "Università Bocconi · Milan",
+          year: "2019 — 2022",
+          degree: "MSc Politics and Technology",
+          school: "Technical University of Munich· Germany",
           note: "Thesis on Corporate Valuation in M&A contexts · 110/110",
         },
         {
-          year: "2016 — 2019",
-          degree: "BSc Economics & Management",
-          school: "Università degli Studi di Milano",
-          note: "Corporate Finance track · 108/110",
+          year: "2015 — 2019",
+          degree: "BA Political and Administrative Sciences",
+          school: "Università degli Studi di Trieste",
+          note: "Corporate Finance track · 107/110",
         },
         {
           year: "2022",
@@ -345,7 +345,7 @@ export const content = {
     contact: {
       sectionNum: "06",
       sectionTitle: "Contact",
-      headline: ["Let's build something", "", "remarkable", "together."],
+      headline: ["Let's build something", " ", "remarkable", "together."],
       links: [
         { type: "email", label: "mario.rossi@email.com", href: "mailto:mario.rossi@email.com" },
         { type: "linkedin", label: "linkedin.com/in/mario-rossi", href: "https://linkedin.com/in/mario-rossi" },
@@ -353,8 +353,8 @@ export const content = {
       ],
     },
     footer: {
-      left: "© 2026 Mario Rossi",
-      right: "Built with care · Milan, Italy",
+      left: "© 2026 Andrea Mili",
+      right: "Built with care · Munich, Germany",
     },
     backToProjects: "← Back to projects",
   },
