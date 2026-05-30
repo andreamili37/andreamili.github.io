@@ -99,7 +99,7 @@ export const content = {
       cta: "Scopri il progetto",
       items: [
         {
-          id: "CSRD Reporting",
+          id: "csrd-reporting",
           symbol: "σ",
           tags: ["Python", "Finance"],
           title: "CSRD Reporting",
@@ -110,7 +110,7 @@ export const content = {
           link: "https://github.com/mariorossi",
         },
         {
-          id: "LkSG Compliance",
+          id: "lksg-compliance",
           symbol: "Δ",
           tags: ["Excel", "VBA"],
           title: "LkSG Compliance",
@@ -324,12 +324,6 @@ export const content = {
           note: "Corporate Finance track · 107/110",
         },
         {
-          year: "2022",
-          degree: "CFA Level I",
-          school: "CFA Institute",
-          note: "Passed at 90th+ percentile · Level II in progress",
-        },
-        {
           year: "2020",
           degree: "Financial Modelling & Valuation",
           school: "FMVA® — Corporate Finance Institute",
@@ -502,12 +496,6 @@ export const content = {
           degree: "BA Politikwissenschaft",
           school: "Universität Triest · Triest, Italien ",
           note: "Schwerpunkt Corporate Finance · 108/110",
-        },
-        {
-          year: "2022",
-          degree: "WIP",
-          school: "WIP",
-          note: "Bestanden im 90. Perzentil · Level II in Bearbeitung",
         },
         {
           year: "2020",
