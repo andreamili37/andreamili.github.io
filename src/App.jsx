@@ -48,6 +48,22 @@ const theme = `
     from { opacity: 0; }
     to   { opacity: 1; }
   }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero-grid        { grid-template-columns: 1fr !important; padding: 6rem 1.5rem 3rem !important; }
+    .hero-visual      { display: none !important; }
+    .about-grid       { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    .contact-grid     { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    .project-content  { grid-template-columns: 1fr !important; }
+    .project-banner   { flex-direction: column !important; padding: 2rem !important; margin: 1rem !important; }
+    .project-symbol   { display: none !important; }
+    .section-pad      { padding: 4rem 1.5rem !important; }
+    .nav-links-wrap   { display: none !important; }
+    .nav-inner        { padding: 1rem 1.5rem !important; }
+    .timeline-item    { padding-left: 2rem !important; }
+    .back-btn         { padding: 1.5rem 1.5rem 0 !important; }
+  }
 `;
 
 // ── HOOK: INTERSECTION OBSERVER ──────────────────────────────────────────────
@@ -70,7 +86,6 @@ function useReveal() {
 // ── NAV ──────────────────────────────────────────────────────────────────────
 function Nav({ lang, setLang, page, setPage, t }) {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", h);
@@ -89,7 +104,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
   const handleLogoClick = () => { setPage("home"); window.scrollTo(0, 0); };
 
   return (
-    <nav style={{
+    <nav className="nav-inner" style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
       display: "flex", alignItems: "center", justifyContent: "space-between",
       padding: "1.2rem 4rem",
@@ -106,7 +121,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
       </button>
 
       {page === "home" && (
-        <ul style={{ display: "flex", gap: "2.2rem", listStyle: "none", alignItems: "center" }}>
+        <ul className="nav-links-wrap" style={{ display: "flex", gap: "2.2rem", listStyle: "none", alignItems: "center" }}>
           {navLinks.map(({ key, href }) => (
             <li key={key}>
               <a href={href} style={{
@@ -146,7 +161,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
 function Hero({ t }) {
   const h = t.hero;
   return (
-    <section id="hero" style={{
+    <section id="hero" className="hero-grid" style={{
       minHeight: "100vh", display: "grid",
       gridTemplateColumns: "1fr 1fr", alignItems: "center",
       padding: "8rem 4rem 4rem", gap: "4rem",
@@ -167,7 +182,7 @@ function Hero({ t }) {
         }}>
           {h.name}<br /><em style={{ fontStyle: "italic", color: "var(--accent)" }}>{h.surname}</em>
         </h1>
-        <p style={{ fontSize: "0.95rem", color: "var(--ink-muted)", marginBottom: "2.5rem" }}>{h.role}</p>
+        <p style={{ fontSize: "1.1rem", color: "var(--ink-muted)", marginBottom: "2.5rem" }}>{h.role}</p>
         <a href="#contatti" style={{
           display: "inline-flex", alignItems: "center", gap: "0.75rem",
           padding: "0.85rem 2rem", background: "var(--dark)",
@@ -182,7 +197,7 @@ function Hero({ t }) {
         </a>
       </div>
 
-      <div style={{ animation: "fadeUp 1s 0.2s ease both" }}>
+      <div className="hero-visual" style={{ animation: "fadeUp 1s 0.2s ease both" }}>
         <div style={{
           background: "var(--surface)", border: "1px solid var(--line)",
           padding: "2.5rem", position: "relative",
@@ -244,9 +259,9 @@ function About({ t }) {
   const [ref1, v1] = useReveal();
   const [ref2, v2] = useReveal();
   return (
-    <section id="about" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
+    <section id="about" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={a.sectionNum} title={a.sectionTitle} />
-      <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "5rem", alignItems: "start" }}>
+      <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "5rem", alignItems: "start" }}>
         <div ref={ref1} style={{ opacity: v1 ? 1 : 0, transform: v1 ? "none" : "translateY(20px)", transition: "all 0.7s ease" }}>
           {a.paragraphs.map((p, i) => (
             <p key={i} style={{ fontSize: "1rem", color: "var(--ink-muted)", marginBottom: "1.2rem", lineHeight: 1.85 }}
@@ -271,14 +286,14 @@ function About({ t }) {
 function Experience({ t }) {
   const e = t.experience;
   return (
-    <section id="experience" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
+    <section id="experience" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
       <SectionHeader num={e.sectionNum} title={e.sectionTitle} />
       <div style={{ position: "relative" }}>
         <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "1px", background: "var(--line)" }} />
         {e.items.map((item, i) => {
           const [ref, visible] = useReveal();
           return (
-            <div key={i} ref={ref} style={{
+            <div key={i} ref={ref} className="timeline-item" style={{
               padding: "0 0 2.8rem 3rem", position: "relative",
               opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)",
               transition: `all 0.6s ${i * 0.1}s ease`,
@@ -322,7 +337,7 @@ function SkillBar({ name, pct, visible }) {
 function Skills({ t }) {
   const s = t.skills;
   return (
-    <section id="skills" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
+    <section id="skills" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={s.sectionNum} title={s.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "1.8rem" }}>
         {s.groups.map((group, gi) => {
@@ -405,7 +420,7 @@ function Projects({ t, setPage, setCurrentProject }) {
     window.scrollTo(0, 0);
   };
   return (
-    <section id="projects" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
+    <section id="projects" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
       <SectionHeader num={p.sectionNum} title={p.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.8rem" }}>
         {p.items.map((proj, i) => (
@@ -422,8 +437,7 @@ function ProjectPage({ project, t, setPage }) {
   if (!project) return null;
   return (
     <div style={{ minHeight: "100vh", paddingTop: "6rem", background: "var(--bg)" }}>
-      {/* Back */}
-      <div style={{ padding: "2rem 4rem 0" }}>
+      <div className="back-btn" style={{ padding: "2rem 4rem 0" }}>
         <button onClick={() => { setPage("home"); }} style={{
           display: "flex", alignItems: "center", gap: "0.5rem",
           fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase",
@@ -434,8 +448,7 @@ function ProjectPage({ project, t, setPage }) {
         </button>
       </div>
 
-      {/* Hero banner */}
-      <div style={{
+      <div className="project-banner" style={{
         margin: "2rem 4rem",
         background: "linear-gradient(135deg, var(--accent-pale), var(--accent-light))",
         border: "1px solid var(--line)",
@@ -457,14 +470,12 @@ function ProjectPage({ project, t, setPage }) {
             {project.title}
           </h1>
         </div>
-        <span style={{ fontFamily: "var(--serif)", fontSize: "6rem", fontStyle: "italic", color: "var(--accent)", opacity: 0.3, flexShrink: 0 }}>
+        <span className="project-symbol" style={{ fontFamily: "var(--serif)", fontSize: "6rem", fontStyle: "italic", color: "var(--accent)", opacity: 0.3, flexShrink: 0 }}>
           {project.symbol}
         </span>
       </div>
 
-      {/* Content */}
-      <div style={{ padding: "0 4rem 6rem", display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: "4rem", alignItems: "start" }}>
-        {/* Left */}
+      <div className="project-content" style={{ padding: "0 4rem 6rem", display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: "4rem", alignItems: "start" }}>
         <div>
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>
             Overview
@@ -484,7 +495,6 @@ function ProjectPage({ project, t, setPage }) {
           </ul>
         </div>
 
-        {/* Right */}
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           <div style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)" }}>
             <div style={{ fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem" }}>
@@ -524,7 +534,7 @@ function ProjectPage({ project, t, setPage }) {
 function Education({ t }) {
   const e = t.education;
   return (
-    <section id="education" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
+    <section id="education" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={e.sectionNum} title={e.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1.8rem" }}>
         {e.items.map((item, i) => {
@@ -561,9 +571,9 @@ function Contact({ t }) {
   const [ref1, v1] = useReveal();
   const [ref2, v2] = useReveal();
   return (
-    <section id="contatti" style={{ padding: "6rem 4rem", background: "var(--dark)" }}>
+    <section id="contatti" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--dark)" }}>
       <SectionHeader num={c.sectionNum} title={c.sectionTitle} dark />
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
+      <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "center" }}>
         <div ref={ref1} style={{ opacity: v1 ? 1 : 0, transform: v1 ? "none" : "translateY(20px)", transition: "all 0.7s ease" }}>
           <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 300, color: "var(--bg2)", lineHeight: 1.25 }}>
             {c.headline[0]}<br />
@@ -597,6 +607,7 @@ function Footer({ t }) {
     <footer style={{
       background: "var(--dark)", borderTop: "1px solid rgba(255,255,255,0.07)",
       padding: "1.8rem 4rem", display: "flex", justifyContent: "space-between", alignItems: "center",
+      flexWrap: "wrap", gap: "0.5rem",
     }}>
       <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.left}</span>
       <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.right}</span>
