@@ -412,7 +412,7 @@ function ProjectCard({ project, cta, onOpen, index }) {
 }
 
 // ── PROJECTS SECTION ─────────────────────────────────────────────────────────
-function Projects({ t, setPage, setCurrentProject }) {
+function Projects({ t, setPage, setCurrentProjectId }) {
   const p = t.projects;
   const handleOpen = (project) => {
     setCurrentProjectId(project.id);
@@ -493,6 +493,18 @@ function ProjectPage({ project, t, setPage }) {
               </li>
             ))}
           </ul>
+
+          {project.disclaimer && (
+            <p style={{
+              marginTop: "2rem", padding: "1rem 1.5rem",
+              borderLeft: "2px solid var(--accent-light)",
+              fontSize: "0.78rem", color: "var(--ink-muted)",
+              fontStyle: "italic", lineHeight: 1.8,
+              background: "var(--bg)",
+            }}>
+              {project.disclaimer}
+            </p>
+          )}
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -523,17 +535,6 @@ function ProjectPage({ project, t, setPage }) {
               <svg width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
               Vedi su GitHub
             </a>
-          )}
-          {project.disclaimer && (
-            <p style={{
-              marginTop: "2rem", padding: "1rem 1.5rem",
-              borderLeft: "2px solid var(--accent-light)",
-              fontSize: "0.78rem", color: "var(--ink-muted)",
-              fontStyle: "italic", lineHeight: 1.8,
-              background: "var(--bg)",
-            }}>
-              {project.disclaimer}
-            </p>
           )}
         </div>
       </div>
@@ -631,9 +632,10 @@ export default function App() {
   const [lang, setLang] = useState("en");
   const [page, setPage] = useState("home");
   const [currentProjectId, setCurrentProjectId] = useState(null);
+  const t = content[lang];
   const currentProject = currentProjectId
-  ? (t.projects.items.find(p => p.id === currentProjectId) || null)
-  : null;
+    ? (t.projects.items.find(p => p.id === currentProjectId) || null)
+    : null;
 
   return (
     <>
@@ -645,7 +647,7 @@ export default function App() {
           <About t={t} />
           <Experience t={t} />
           <Skills t={t} />
-          <Projects t={t} setPage={setPage} setCurrentProject={setCurrentProject} />
+          <Projects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
           <Education t={t} />
           <Contact t={t} />
           <Footer t={t} />
@@ -659,4 +661,3 @@ export default function App() {
     </>
   );
 }
-
