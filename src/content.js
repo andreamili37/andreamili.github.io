@@ -14,6 +14,7 @@ export const content = {
       surname: "Mili",
       role: "ESG & Sustainability Specialist · Monaco di Baviera, Germania",
       cta: "Contattami",
+      downloadCv: "Scarica Curriculum Vitae",
       stats: {
         years: { num: "4+", label: "anni di esperienza" },
         projects: { num: "12", label: "progetti completati" },
@@ -192,6 +193,7 @@ export const content = {
       surname: "Mili",
       role: "ESG & Sustainability Specialist · Munich, Germany",
       cta: "Get in touch",
+      downloadCv: "Download CV",
       stats: {
         years: { num: "4+", label: "years of experience" },
         projects: { num: "12", label: "completed projects" },
@@ -369,6 +371,7 @@ export const content = {
       surname: "Mili",
       role: "ESG- und Nachhaltigkeitsexperte · München, Deutschland",
       cta: "Kontakt aufnehmen",
+      downloadCv: "Lebenslauf herunterladen",
       stats: {
         years: { num: "4+", label: "Jahre Erfahrung" },
         projects: { num: "20", label: "abgeschlossene Projekte" },

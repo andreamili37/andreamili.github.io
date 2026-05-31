@@ -195,6 +195,19 @@ function Hero({ t }) {
           {h.cta}
           <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
         </a>
+        <a href="/cv-en.pdf" download style={{
+  display: "inline-flex", alignItems: "center", gap: "0.75rem",
+  padding: "0.85rem 2rem", background: "transparent",
+  color: "var(--ink)", fontSize: "0.75rem", letterSpacing: "0.1em",
+  textTransform: "uppercase", border: "1px solid var(--line)",
+  marginLeft: "1rem", transition: "all 0.3s",
+}}
+  onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+  onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.color = "var(--ink)"; }}
+>
+  <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+  {h.downloadCv}
+</a>
       </div>
 
       <div className="hero-visual" style={{ animation: "fadeUp 1s 0.2s ease both" }}>
