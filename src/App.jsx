@@ -632,7 +632,7 @@ export default function App() {
   const [page, setPage] = useState("home");
   const [currentProjectId, setCurrentProjectId] = useState(null);
   const currentProject = currentProjectId
-  ? ([...t.projects.items, ...t.sideProjects.items].find(p => p.id === currentProjectId) || null)
+  ? (t.projects.items.find(p => p.id === currentProjectId) || null)
   : null;
 
   return (
