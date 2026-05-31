@@ -196,18 +196,18 @@ function Hero({ t, lang }) {
           <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
         </a>
         <a href={`https://raw.githubusercontent.com/andreamili37/andreamili.github.io/gh-pages/cv-${lang === "it" ? "it" : lang === "de" ? "de" : "en"}-andrea-mili.pdf`} download style={{
-  display: "inline-flex", alignItems: "center", gap: "0.75rem",
-  padding: "0.85rem 2rem", background: "transparent",
-  color: "var(--ink)", fontSize: "0.75rem", letterSpacing: "0.1em",
-  textTransform: "uppercase", border: "1px solid var(--line)",
-  marginLeft: "1rem", transition: "all 0.3s",
-}}
-  onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
-  onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.color = "var(--ink)"; }}
->
-  <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-  {h.downloadCv}
-</a>
+          display: "inline-flex", alignItems: "center", gap: "0.75rem",
+          padding: "0.85rem 2rem", background: "transparent",
+          color: "var(--ink)", fontSize: "0.75rem", letterSpacing: "0.1em",
+          textTransform: "uppercase", border: "1px solid var(--line)",
+          marginLeft: "1rem", transition: "all 0.3s",
+        }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.color = "var(--ink)"; }}
+        >
+          <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          {h.downloadCv}
+        </a>
       </div>
 
       <div className="hero-visual" style={{ animation: "fadeUp 1s 0.2s ease both" }}>
@@ -282,13 +282,18 @@ function About({ t }) {
             />
           ))}
         </div>
-        <div ref={ref2} style={{ display: "flex", flexDirection: "column", gap: "1.2rem", opacity: v2 ? 1 : 0, transform: v2 ? "none" : "translateY(20px)", transition: "all 0.7s 0.15s ease" }}>
-          {a.facts.map((f, i) => (
-            <div key={i} style={{ padding: "1.3rem 1.5rem", borderLeft: "2px solid var(--accent-light)", background: "var(--bg)" }}>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.25rem" }}>{f.label}</div>
-              <div style={{ fontSize: "0.88rem", color: "var(--ink)" }}>{f.value}</div>
-            </div>
-          ))}
+        <div ref={ref2} style={{ opacity: v2 ? 1 : 0, transform: v2 ? "none" : "translateY(20px)", transition: "all 0.7s 0.15s ease" }}>
+          <img
+            src="https://raw.githubusercontent.com/andreamili37/andreamili.github.io/gh-pages/foto.JPEG"
+            alt="Andrea Mili"
+            style={{
+              width: "100%",
+              maxWidth: "400px",
+              display: "block",
+              border: "1px solid var(--line)",
+              boxShadow: "0 8px 40px rgba(74,127,191,0.1)",
+            }}
+          />
         </div>
       </div>
     </section>
@@ -674,4 +679,3 @@ export default function App() {
     </>
   );
 }
- 
