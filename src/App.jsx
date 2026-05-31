@@ -195,7 +195,7 @@ function Hero({ t }) {
           {h.cta}
           <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
         </a>
-        <a href="/Andrea-Mili-CV.pdf" download style={{
+        <a href="/cv-en-andrea-mili.pdf" download style={{
   display: "inline-flex", alignItems: "center", gap: "0.75rem",
   padding: "0.85rem 2rem", background: "transparent",
   color: "var(--ink)", fontSize: "0.75rem", letterSpacing: "0.1em",
