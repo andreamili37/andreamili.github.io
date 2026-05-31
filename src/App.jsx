@@ -524,6 +524,17 @@ function ProjectPage({ project, t, setPage }) {
               Vedi su GitHub
             </a>
           )}
+          {project.disclaimer && (
+            <p style={{
+              marginTop: "2rem", padding: "1rem 1.5rem",
+              borderLeft: "2px solid var(--accent-light)",
+              fontSize: "0.78rem", color: "var(--ink-muted)",
+              fontStyle: "italic", lineHeight: 1.8,
+              background: "var(--bg)",
+            }}>
+              {project.disclaimer}
+            </p>
+          )}
         </div>
       </div>
     </div>

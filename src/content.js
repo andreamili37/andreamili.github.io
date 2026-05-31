@@ -108,6 +108,7 @@ export const content = {
           highlights: ["Calcolo della frontiera efficiente", "Sharpe Ratio ottimizzato", "Importazione dati via Yahoo Finance API", "Visualizzazione interattiva con Plotly"],
           tech: ["Python", "NumPy", "Pandas", "Plotly", "yfinance"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
           id: "lksg-compliance",
@@ -119,6 +120,7 @@ export const content = {
           highlights: ["Import automatico bilanci via API", "Scenario analysis (base/bull/bear)", "Report PDF in un click", "Dashboard riassuntiva con grafici"],
           tech: ["Excel", "VBA", "Power Query"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
           id: "ma-monitor",
@@ -130,6 +132,7 @@ export const content = {
           highlights: ["Aggiornamento dati settimanale", "Filtri per settore e deal size", "Trend storici 2015–2024", "Export report automatizzato"],
           tech: ["PowerBI", "Power Query", "DAX", "Excel"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
       ],
     },
@@ -282,6 +285,7 @@ export const content = {
           highlights: ["Efficient frontier calculation", "Optimised Sharpe Ratio", "Data import via Yahoo Finance API", "Interactive visualisation with Plotly"],
           tech: ["Python", "NumPy", "Pandas", "Plotly", "yfinance"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
           id: "dcf-model",
@@ -293,6 +297,7 @@ export const content = {
           highlights: ["Automatic financial statement import via API", "Scenario analysis (base/bull/bear)", "One-click PDF report", "Summary dashboard with charts"],
           tech: ["Excel", "VBA", "Power Query"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
           id: "ma-monitor",
@@ -304,6 +309,7 @@ export const content = {
           highlights: ["Weekly data updates", "Filters by sector and deal size", "Historical trends 2015–2024", "Automated report export"],
           tech: ["PowerBI", "Power Query", "DAX", "Excel"],
           link: "https://github.com/mariorossi",
+          disclaimer: "The information in this section merely depict my roles and tasks within the project. It does not indicate any client-sensitive information nor any specific methodology developed within the company employing me.",
         },
       ],
     },
@@ -456,6 +462,7 @@ export const content = {
           highlights: ["Berechnung der Effizienzgrenze", "Optimierte Sharpe Ratio", "Datenimport über Yahoo Finance API", "Interaktive Visualisierung mit Plotly"],
           tech: ["Python", "NumPy", "Pandas", "Plotly", "yfinance"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
           id: "dcf-model",
@@ -467,6 +474,7 @@ export const content = {
           highlights: ["Automatischer Bilanzimport via API", "Szenarioanalyse (base/bull/bear)", "PDF-Bericht per Knopfdruck", "Übersichts-Dashboard mit Diagrammen"],
           tech: ["Excel", "VBA", "Power Query"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
           id: "ma-monitor",
@@ -478,6 +486,7 @@ export const content = {
           highlights: ["Wöchentliche Datenaktualisierung", "Filter nach Sektor und Deal-Größe", "Historische Trends 2015–2024", "Automatisierter Berichtsexport"],
           tech: ["PowerBI", "Power Query", "DAX", "Excel"],
           link: "https://github.com/mariorossi",
+          disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
       ],
     },
