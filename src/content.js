@@ -276,7 +276,7 @@ export const content = {
       cta: "Explore project",
       items: [
         {
-          id: "portfolio-optimizer",
+          id: "csrd-reporting",
           symbol: "σ",
           tags: ["Python", "Finance"],
           title: "Portfolio Optimizer",
@@ -288,7 +288,7 @@ export const content = {
           disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
-          id: "dcf-model",
+          id: "lksg-compliance",
           symbol: "Δ",
           tags: ["Excel", "VBA"],
           title: "Automated DCF Model",
@@ -453,7 +453,7 @@ export const content = {
       cta: "Projekt erkunden",
       items: [
         {
-          id: "portfolio-optimizer",
+          id: "csrd-reporting",
           symbol: "σ",
           tags: ["Python", "Finance"],
           title: "Portfolio Optimizer",
@@ -465,7 +465,7 @@ export const content = {
           disclaimer: "Questo progetto è stato sviluppato a scopo personale e non rappresenta in alcun modo il lavoro svolto presso i miei datori di lavoro.",
         },
         {
-          id: "dcf-model",
+          id: "lksg-compliance",
           symbol: "Δ",
           tags: ["Excel", "VBA"],
           title: "Automatisiertes DCF-Modell",
