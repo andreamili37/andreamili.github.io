@@ -3,7 +3,7 @@ export const content = {
     nav: {
       about: "Chi sono",
       experience: "Esperienza",
-      skills: "Skills",
+      skills: "Skills e Lingue",
       projects: "Progetti",
       education: "Formazione",
       contact: "Contatti",
@@ -62,7 +62,7 @@ export const content = {
     },
     skills: {
       sectionNum: "03",
-      sectionTitle: "Skills",
+      sectionTitle: "Skills e Lingue",
       groups: [
         {
           title: "Finance & Analisi",
@@ -182,7 +182,7 @@ export const content = {
     nav: {
       about: "About",
       experience: "Experience",
-      skills: "Skills",
+      skills: "Skills and Languages",
       projects: "Projects",
       education: "Education",
       contact: "Contact",
@@ -241,7 +241,7 @@ export const content = {
     },
     skills: {
       sectionNum: "03",
-      sectionTitle: "Skills",
+      sectionTitle: "Skills and Languages",
       groups: [
         {
           title: "ESG and Sustainability",
@@ -360,7 +360,7 @@ export const content = {
     nav: {
       about: "Über mich",
       experience: "Erfahrung",
-      skills: "Skills",
+      skills: "Skills und Sprachen",
       projects: "Projekte",
       education: "Ausbildung",
       contact: "Kontakt",
@@ -419,7 +419,7 @@ export const content = {
     },
     skills: {
       sectionNum: "03",
-      sectionTitle: "Skills",
+      sectionTitle: "Skills und Sprachen",
       groups: [
         {
           title: "Finance & Analyse",
