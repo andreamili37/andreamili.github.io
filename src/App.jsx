@@ -158,7 +158,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
 }
 
 // ── HERO ─────────────────────────────────────────────────────────────────────
-function Hero({ t }) {
+function Hero({ t, lang }) {
   const h = t.hero;
   return (
     <section id="hero" className="hero-grid" style={{
@@ -656,7 +656,7 @@ export default function App() {
       <Nav lang={lang} setLang={setLang} page={page} setPage={setPage} t={t} />
       {page === "home" ? (
         <>
-          <Hero t={t} />
+          <Hero t={t} lang={lang} />
           <About t={t} />
           <Experience t={t} />
           <Skills t={t} />
