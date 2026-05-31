@@ -415,7 +415,7 @@ function ProjectCard({ project, cta, onOpen, index }) {
 function Projects({ t, setPage, setCurrentProject }) {
   const p = t.projects;
   const handleOpen = (project) => {
-    setCurrentProject(project);
+    setCurrentProjectId(project.id);
     setPage("project");
     window.scrollTo(0, 0);
   };
@@ -630,8 +630,10 @@ function Footer({ t }) {
 export default function App() {
   const [lang, setLang] = useState("en");
   const [page, setPage] = useState("home");
-  const [currentProject, setCurrentProject] = useState(null);
-  const t = content[lang];
+  const [currentProjectId, setCurrentProjectId] = useState(null);
+  const currentProject = currentProjectId
+  ? ([...t.projects.items, ...t.sideProjects.items].find(p => p.id === currentProjectId) || null)
+  : null;
 
   return (
     <>
