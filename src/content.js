@@ -5,6 +5,7 @@ export const content = {
       experience: "Esperienza",
       skills: "Skills e Lingue",
       projects: "Progetti",
+      sideprojects: "Progetti Personali",
       education: "Formazione",
       contact: "Contatti",
     },
@@ -143,8 +144,51 @@ export const content = {
         },
       ],
     },
-    education: {
+    sideProjects: {
       sectionNum: "05",
+      sectionTitle: "Progetti Personali",
+      cta: "Scopri il progetto",
+      items: [
+        {
+          id: "side-project-1",
+          symbol: "α",
+          tags: ["ESG", "Excel"],
+          title: "Progetto 1",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["Excel", "PowerBI"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+        {
+          id: "side-project-2",
+          symbol: "β",
+          tags: ["Python", "Data"],
+          title: "Progetto 2",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["Python", "Pandas"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+        {
+          id: "side-project-3",
+          symbol: "γ",
+          tags: ["ESG", "Research"],
+          title: "Progetto 3",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["PowerBI", "Excel"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+      ],
+    },
+    education: {
+      sectionNum: "06",
       sectionTitle: "Formazione",
       items: [
         {
@@ -168,7 +212,7 @@ export const content = {
       ],
     },
     contact: {
-      sectionNum: "06",
+      sectionNum: "07",
       sectionTitle: "Contatti",
       headline: ["Entriamo in contatto.", "", "", ""],
       links: [
@@ -190,6 +234,7 @@ export const content = {
       experience: "Experience",
       skills: "Skills and Languages",
       projects: "Projects",
+      sideprojects: "Side Projects",
       education: "Education",
       contact: "Contact",
     },
@@ -327,8 +372,51 @@ export const content = {
         },
       ],
     },
-    education: {
+    sideProjects: {
       sectionNum: "05",
+      sectionTitle: "Progetti Personali",
+      cta: "Scopri il progetto",
+      items: [
+        {
+          id: "side-project-1",
+          symbol: "α",
+          tags: ["ESG", "Excel"],
+          title: "Progetto 1",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["Excel", "PowerBI"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+        {
+          id: "side-project-2",
+          symbol: "β",
+          tags: ["Python", "Data"],
+          title: "Progetto 2",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["Python", "Pandas"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+        {
+          id: "side-project-3",
+          symbol: "γ",
+          tags: ["ESG", "Research"],
+          title: "Progetto 3",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["PowerBI", "Excel"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+      ],
+    },
+    education: {
+      sectionNum: "06",
       sectionTitle: "Education",
       items: [
         {
@@ -352,7 +440,7 @@ export const content = {
       ],
     },
     contact: {
-      sectionNum: "06",
+      sectionNum: "07",
       sectionTitle: "Contact",
       headline: ["Let's connect.", "", "", ""],
       links: [
@@ -374,6 +462,7 @@ export const content = {
       experience: "Erfahrung",
       skills: "Skills und Sprachen",
       projects: "Projekte",
+      sideprojects: "Eigenprojekte",
       education: "Ausbildung",
       contact: "Kontakt",
     },
@@ -511,8 +600,51 @@ export const content = {
         },
       ],
     },
-    education: {
+    sideProjects: {
       sectionNum: "05",
+      sectionTitle: "Progetti Personali",
+      cta: "Scopri il progetto",
+      items: [
+        {
+          id: "side-project-1",
+          symbol: "α",
+          tags: ["ESG", "Excel"],
+          title: "Progetto 1",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["Excel", "PowerBI"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+        {
+          id: "side-project-2",
+          symbol: "β",
+          tags: ["Python", "Data"],
+          title: "Progetto 2",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["Python", "Pandas"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+        {
+          id: "side-project-3",
+          symbol: "γ",
+          tags: ["ESG", "Research"],
+          title: "Progetto 3",
+          desc: "Breve descrizione del progetto personale.",
+          fullDesc: "Descrizione estesa del progetto.",
+          highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
+          tech: ["PowerBI", "Excel"],
+          link: "https://github.com/andreamili37",
+          disclaimer: "Questo progetto è stato sviluppato a titolo personale.",
+        },
+      ],
+    },
+    education: {
+      sectionNum: "06",
       sectionTitle: "Ausbildung",
       items: [
         {
@@ -536,7 +668,7 @@ export const content = {
       ],
     },
     contact: {
-      sectionNum: "06",
+      sectionNum: "07",
       sectionTitle: "Kontakt",
       headline: ["Lassen Sie uns etwas", "", "Bedeutendes", "gemeinsam aufbauen."],
       links: [
