@@ -255,8 +255,8 @@ export const content = {
       sectionNum: "01",
       sectionTitle: "About me",
       paragraphs: [
-        "I am an <strong>ESG and Sustainability Expert</strong> with a strong passion for data and building models that turn complex numbers into clear decisions. I have gained experience in M&A, company valuation and strategic planning.",
-        "In my free time I am interested in <strong>data analysis</strong> and develop small tools to automate repetitive tasks. I enjoy combining analytical rigour and creativity to find elegant solutions to concrete problems.",
+        "I am an <strong>ESG and Sustainability Expert</strong> with a strong passion for data and building models that turn complex numbers into clear decisions. I have gained extensive experience in corporate sustainability projects ... .",
+        "My strength lies in my adaptability (...)",
         "While I decided to dedicate my professional career to empowering the sustainable transition of organisations, I dedicate a great part of my free time to <strong>literature</strong>, both by reading fiction and non-fiction masterpieces, as well as producing my own pieces of creative writing. Examples of my productions can be read in my Substack pages.",
       ],
       facts: [],
@@ -275,7 +275,7 @@ export const content = {
           period: "Nov 2022 — Dec 2024",
           role: "Senior Associate ESG/Sustainability",
           company: "KPMG · Munich, Germany",
-          desc: "Participation in financial due diligence projects and support in drafting information memoranda. Client database management and periodic reporting.",
+          desc: "Sustainability Reporting",
         },
         {
           period: "May 2021 — Jun 2022",
@@ -374,8 +374,8 @@ export const content = {
     },
     sideProjects: {
       sectionNum: "05",
-      sectionTitle: "Progetti Personali",
-      cta: "Scopri il progetto",
+      sectionTitle: "Side Projects",
+      cta: "Explore the project",
       items: [
         {
           id: "side-project-1",
@@ -602,8 +602,8 @@ export const content = {
     },
     sideProjects: {
       sectionNum: "05",
-      sectionTitle: "Progetti Personali",
-      cta: "Scopri il progetto",
+      sectionTitle: "Eigenprojekte",
+      cta: "Projekt erkunden",
       items: [
         {
           id: "side-project-1",
