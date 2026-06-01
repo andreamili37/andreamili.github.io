@@ -675,11 +675,23 @@ function Footer({ t }) {
   return (
     <footer style={{
       background: "var(--dark)", borderTop: "1px solid rgba(255,255,255,0.07)",
-      padding: "1.8rem 4rem", display: "flex", justifyContent: "space-between", alignItems: "center",
-      flexWrap: "wrap", gap: "0.5rem",
+      padding: "2.5rem 4rem", display: "flex", flexDirection: "column", gap: "1.5rem",
+      flexWrap: "wrap",
     }}>
-      <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.left}</span>
-      <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.right}</span>
+      {t.siteDisclaimer && (
+        <p style={{
+          fontSize: "0.7rem", color: "rgba(247,245,240,0.35)",
+          lineHeight: 1.7, maxWidth: "80ch",
+          borderTop: "1px solid rgba(255,255,255,0.07)",
+          paddingTop: "1.5rem",
+        }}>
+          {t.siteDisclaimer}
+        </p>
+      )}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
+        <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.left}</span>
+        <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.right}</span>
+      </div>
     </footer>
   );
 }

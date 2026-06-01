@@ -227,6 +227,7 @@ export const content = {
       right: "Costruito con cura · Monaco di Baviera, Germania",
     },
     backToProjects: "← Torna ai progetti",
+    siteDisclaimer: "Questo sito costituisce esclusivamente un curriculum vitae interattivo a scopo di presentazione professionale. Non rappresenta né implica l'offerta di servizi di consulenza o di qualsiasi altra prestazione professionale, a titolo oneroso o gratuito. Nessuna informazione contenuta in questo sito è riconducibile a dati riservati, metodologie proprietarie o informazioni confidenziali relative ad aziende o clienti con cui ho collaborato.",
   },
 
   en: {
@@ -457,6 +458,7 @@ export const content = {
       right: "Buten un Binnen, Wagen un Winnen · Munich, Germany",
     },
     backToProjects: "← Back to projects",
+    siteDisclaimer: "This website constitutes solely an interactive curriculum vitae for professional presentation purposes. It does not represent or imply the offer of any consulting or professional services, whether paid or unpaid. No information contained in this website is traceable to confidential data, proprietary methodologies, or sensitive information relating to companies or clients I have worked with.",
   },
 
   de: {
@@ -687,5 +689,6 @@ export const content = {
       right: "Mit Sorgfalt gebaut · München, Deutschland",
     },
     backToProjects: "← Zurück zu den Projekten",
+    siteDisclaimer: "Diese Website dient ausschließlich als interaktiver Lebenslauf zu professionellen Präsentationszwecken. Sie stellt weder ein Angebot von Beratungs- oder sonstigen professionellen Dienstleistungen dar, noch impliziert sie ein solches, weder entgeltlich noch unentgeltlich. Keine der auf dieser Website enthaltenen Informationen ist auf vertrauliche Daten, proprietäre Methoden oder sensible Informationen zurückzuführen, die Unternehmen oder Kunden betreffen, mit denen ich zusammengearbeitet habe.",
   },
 };
