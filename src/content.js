@@ -61,31 +61,32 @@ export const content = {
       sectionTitle: "Skills e Lingue",
       groups: [
         {
-          title: "Finance & Analisi",
+          title: "ESG & Sostenibilità",
           items: [
-            { name: "Financial Modelling", pct: 95 },
-            { name: "Valuation (DCF, Comps)", pct: 90 },
-            { name: "M&A / Due Diligence", pct: 80 },
-            { name: "Corporate Finance", pct: 85 },
+            { name: "Normative ESG (CSRD, SFDR, Tassonomia UE)", level: "Esperto" },
+            { name: "Sustainability Reporting", level: "Esperto" },
+            { name: "Double Materiality Assessment", level: "Avanzato" },
+            { name: "Financial Modelling & Valuation", level: "Avanzato" },
+            { name: "M&A / Due Diligence", level: "Competente" },
           ],
         },
         {
-          title: "Tool & Software",
+          title: "Strumenti & Software",
           items: [
-            { name: "Excel, PowerPoint", pct: 95 },
-            { name: "Generative AI (Claude, Microsoft Copilot)", pct: 95 },
-            { name: "PowerBI / Tableau", pct: 80 },
-            { name: "Python (pandas, numpy)", pct: 70 },
-            { name: "SQL", pct: 75 },
+            { name: "Excel / PowerPoint", level: "Esperto" },
+            { name: "Generative AI (Claude, Microsoft Copilot)", level: "Esperto" },
+            { name: "PowerBI", level: "Avanzato" },
+            { name: "Python (pandas, numpy)", level: "Competente" },
+            { name: "SQL", level: "Conoscenza" },
           ],
         },
         {
           title: "Soft Skills",
           items: [
-            { name: "Problem Solving", pct: 95 },
-            { name: "Comunicazione", pct: 85 },
-            { name: "Teamwork", pct: 90 },
-            { name: "Presentazioni", pct: 88 },
+            { name: "Problem Solving", level: "Esperto" },
+            { name: "Gestione degli Stakeholder", level: "Esperto" },
+            { name: "Storytelling & Presentazioni", level: "Avanzato" },
+            { name: "Teamwork", level: "Avanzato" },
           ],
         },
         {
@@ -195,7 +196,7 @@ export const content = {
           year: "2019 — 2022",
           degree: "MSc Politics and Technology",
           school: "Technical University of Munich · Monaco di Baviera, Germania",
-          note: "Tesi su Corporate Valuation in contesti di M&A · Voto finale: 1.8 ",
+          note: "Tesi su Corporate Valuation in contesti di M&A · Voto finale: 1.8",
         },
         {
           year: "2016 — 2019",
@@ -290,30 +291,32 @@ export const content = {
       sectionTitle: "Skills and Languages",
       groups: [
         {
-          title: "ESG and Sustainability",
+          title: "ESG & Sustainability",
           items: [
-            { name: "ESG Regulations", pct: 95 },
-            { name: "Valuation (DCF, Comps)", pct: 90 },
-            { name: "M&A / Due Diligence", pct: 80 },
-            { name: "Corporate Finance", pct: 85 },
+            { name: "ESG Regulations (CSRD, SFDR, EU Taxonomy)", level: "Expert" },
+            { name: "Sustainability Reporting", level: "Expert" },
+            { name: "Double Materiality Assessment", level: "Advanced" },
+            { name: "Financial Modelling & Valuation", level: "Advanced" },
+            { name: "M&A / Due Diligence", level: "Proficient" },
           ],
         },
         {
           title: "Tools & Software",
           items: [
-            { name: "Excel / VBA", pct: 95 },
-            { name: "PowerBI", pct: 80 },
-            { name: "Python (pandas, numpy)", pct: 70 },
-            { name: "Generative AI tools (Claude, Microsoft Copilot)", pct: 75 },
+            { name: "Excel / PowerPoint", level: "Expert" },
+            { name: "Generative AI (Claude, Microsoft Copilot)", level: "Expert" },
+            { name: "PowerBI", level: "Advanced" },
+            { name: "Python (pandas, numpy)", level: "Proficient" },
+            { name: "SQL", level: "Familiar" },
           ],
         },
         {
           title: "Soft Skills",
           items: [
-            { name: "Problem Solving", pct: 95 },
-            { name: "Stakeholder Relationship Management", pct: 85 },
-            { name: "Storytelling", pct: 90 },
-            { name: "Presentations", pct: 88 },
+            { name: "Problem Solving", level: "Expert" },
+            { name: "Stakeholder Management", level: "Expert" },
+            { name: "Storytelling & Presentations", level: "Advanced" },
+            { name: "Teamwork", level: "Advanced" },
           ],
         },
         {
@@ -422,7 +425,7 @@ export const content = {
         {
           year: "2019 — 2022",
           degree: "MSc Politics and Technology",
-          school: "Technical University of Munich· Germany",
+          school: "Technical University of Munich · Germany",
           note: "Focus on Sustainability Transition and Corporate Sustainability · Final Grade: 1.8",
         },
         {
@@ -500,7 +503,7 @@ export const content = {
           desc: "Entwicklung von Finanzmodellen zur Bewertung potenzieller Akquisitionen. Unterstützung des Managements bei der Vorbereitung von Vorstandspräsentationen. Marktanalyse und Wettbewerbsvergleiche in 3+ Industriesektoren.",
         },
         {
-          period: "Jul 2021 — Dez 2022",
+          period: "Nov 2022 — Dez 2024",
           role: "Senior Associate ESG/Sustainability",
           company: "KPMG · München, Deutschland",
           desc: "Mitarbeit an Financial Due Diligence Projekten und Unterstützung bei der Erstellung von Information Memoranda. Kundendatenbankpflege und periodisches Reporting.",
@@ -518,30 +521,32 @@ export const content = {
       sectionTitle: "Skills und Sprachen",
       groups: [
         {
-          title: "Finance & Analyse",
+          title: "ESG & Nachhaltigkeit",
           items: [
-            { name: "Financial Modelling", pct: 95 },
-            { name: "Valuation (DCF, Comps)", pct: 90 },
-            { name: "M&A / Due Diligence", pct: 80 },
-            { name: "Corporate Finance", pct: 85 },
+            { name: "ESG-Regularien (CSRD, SFDR, EU-Taxonomie)", level: "Experte" },
+            { name: "Nachhaltigkeitsberichterstattung", level: "Experte" },
+            { name: "Doppelte Wesentlichkeitsanalyse", level: "Fortgeschritten" },
+            { name: "Financial Modelling & Bewertung", level: "Fortgeschritten" },
+            { name: "M&A / Due Diligence", level: "Kompetent" },
           ],
         },
         {
           title: "Tools & Software",
           items: [
-            { name: "Excel / VBA", pct: 95 },
-            { name: "PowerBI / Tableau", pct: 80 },
-            { name: "Python (pandas, numpy)", pct: 70 },
-            { name: "Bloomberg / Refinitiv", pct: 75 },
+            { name: "Excel / PowerPoint", level: "Experte" },
+            { name: "Generative KI (Claude, Microsoft Copilot)", level: "Experte" },
+            { name: "PowerBI", level: "Fortgeschritten" },
+            { name: "Python (pandas, numpy)", level: "Kompetent" },
+            { name: "SQL", level: "Vertraut" },
           ],
         },
         {
           title: "Soft Skills",
           items: [
-            { name: "Problemlösung", pct: 95 },
-            { name: "Kommunikation", pct: 85 },
-            { name: "Teamarbeit", pct: 90 },
-            { name: "Präsentationen", pct: 88 },
+            { name: "Problemlösung", level: "Experte" },
+            { name: "Stakeholder-Management", level: "Experte" },
+            { name: "Storytelling & Präsentationen", level: "Fortgeschritten" },
+            { name: "Teamarbeit", level: "Fortgeschritten" },
           ],
         },
         {
@@ -648,22 +653,22 @@ export const content = {
       sectionTitle: "Ausbildung",
       items: [
         {
-          year: "2019 — 2021",
+          year: "2019 — 2022",
           degree: "MSc Politics and Technology",
           school: "Technische Universität München · München, Deutschland",
-          note: "Abschlussarbeit über Corporate Valuation in M&A-Kontexten · 110/110",
+          note: "Schwerpunkt Nachhaltigkeitstransition · Abschlussnote: 1.8",
         },
         {
           year: "2016 — 2019",
           degree: "BA Politikwissenschaft",
-          school: "Universität Triest · Triest, Italien ",
-          note: "Schwerpunkt Corporate Finance · 108/110",
+          school: "Universität Triest · Triest, Italien",
+          note: "Schwerpunkt EU-Institutionen und Politikanalyse · Abschlussnote: 107/110",
         },
         {
-          year: "2020",
-          degree: "Financial Modelling & Valuation",
-          school: "FMVA® — Corporate Finance Institute",
-          note: "Professionelle Online-Zertifizierung",
+          year: "2023",
+          degree: "ESG Expert (EBS)",
+          school: "EBS University",
+          note: "Professionelle ESG-Zertifizierung",
         },
       ],
     },
