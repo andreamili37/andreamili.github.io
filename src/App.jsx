@@ -184,31 +184,33 @@ function Hero({ t, lang }) {
           {h.name}<br /><em style={{ fontStyle: "italic", color: "var(--accent)" }}>{h.surname}</em>
         </h1>
         <p style={{ fontSize: "1.1rem", color: "var(--ink-muted)", marginBottom: "2.5rem" }}>{h.role}</p>
-        <a href="#contatti" style={{
-          display: "inline-flex", alignItems: "center", gap: "0.75rem",
-          padding: "0.85rem 2rem", background: "var(--dark)",
-          color: "var(--bg)", fontSize: "0.75rem", letterSpacing: "0.1em",
-          textTransform: "uppercase", transition: "background 0.3s",
-        }}
-          onMouseEnter={e => e.currentTarget.style.background = "var(--accent)"}
-          onMouseLeave={e => e.currentTarget.style.background = "var(--dark)"}
-        >
-          {h.cta}
-          <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-        </a>
-        <a href={`https://raw.githubusercontent.com/andreamili37/andreamili.github.io/gh-pages/cv-${lang === "it" ? "it" : lang === "de" ? "de" : "en"}-andrea-mili.pdf`} download style={{
-          display: "inline-flex", alignItems: "center", gap: "0.75rem",
-          padding: "0.85rem 2rem", background: "transparent",
-          color: "var(--ink)", fontSize: "0.75rem", letterSpacing: "0.1em",
-          textTransform: "uppercase", border: "1px solid var(--line)",
-          marginLeft: "1rem", transition: "all 0.3s",
-        }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.color = "var(--ink)"; }}
-        >
-          <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          {h.downloadCv}
-        </a>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
+          <a href="#contatti" style={{
+            display: "inline-flex", alignItems: "center", gap: "0.75rem",
+            padding: "0.85rem 2rem", background: "var(--dark)",
+            color: "var(--bg)", fontSize: "0.75rem", letterSpacing: "0.1em",
+            textTransform: "uppercase", transition: "background 0.3s",
+          }}
+            onMouseEnter={e => e.currentTarget.style.background = "var(--accent)"}
+            onMouseLeave={e => e.currentTarget.style.background = "var(--dark)"}
+          >
+            {h.cta}
+            <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+          <a href={`https://raw.githubusercontent.com/andreamili37/andreamili.github.io/gh-pages/cv-${lang === "it" ? "it" : lang === "de" ? "de" : "en"}-andrea-mili.pdf`} download style={{
+            display: "inline-flex", alignItems: "center", gap: "0.75rem",
+            padding: "0.85rem 2rem", background: "transparent",
+            color: "var(--ink)", fontSize: "0.75rem", letterSpacing: "0.1em",
+            textTransform: "uppercase", border: "1px solid var(--line)",
+            transition: "all 0.3s",
+          }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent)"; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.color = "var(--ink)"; }}
+          >
+            <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {h.downloadCv}
+          </a>
+        </div>
       </div>
 
       <div className="hero-visual" style={{ animation: "fadeUp 1s 0.2s ease both" }}>
@@ -335,32 +337,17 @@ function Experience({ t }) {
 }
 
 // ── SKILLS ───────────────────────────────────────────────────────────────────
-function SkillBar({ name, pct, visible }) {
-  return (
-    <div style={{ marginBottom: "1rem" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", marginBottom: "0.35rem" }}>
-        <span style={{ color: "var(--ink)" }}>{name}</span>
-        <span style={{ color: "var(--accent)", fontWeight: 500 }}>{pct}%</span>
-      </div>
-      <div style={{ height: "2px", background: "var(--line)", borderRadius: "1px", overflow: "hidden" }}>
-        <div style={{
-          height: "100%", background: "linear-gradient(to right, var(--accent-light), var(--accent))",
-          borderRadius: "1px", width: visible ? `${pct}%` : "0",
-          transition: "width 1.2s cubic-bezier(0.4,0,0.2,1)",
-        }} />
-      </div>
-    </div>
-  );
-}
-
 function Skills({ t }) {
   const s = t.skills;
+  const isLanguages = (group) => group.items && group.items[0] && "level" in group.items[0];
+
   return (
     <section id="skills" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={s.sectionNum} title={s.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "1.8rem" }}>
         {s.groups.map((group, gi) => {
           const [ref, visible] = useReveal();
+          const langs = isLanguages(group);
           return (
             <div key={gi} ref={ref} style={{
               padding: "2rem", border: "1px solid var(--line)", background: "var(--bg)",
@@ -371,7 +358,37 @@ function Skills({ t }) {
               onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.transform = visible ? "none" : "translateY(20px)"; }}
             >
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.15rem", fontStyle: "italic", marginBottom: "1.5rem" }}>{group.title}</div>
-              {group.items.map((item, ii) => <SkillBar key={ii} name={item.name} pct={item.pct} visible={visible} />)}
+
+              {langs ? (
+                // ── LANGUAGE LIST ──
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  {group.items.map((item, ii) => (
+                    <div key={ii} style={{
+                      display: "flex", justifyContent: "space-between", alignItems: "baseline",
+                      paddingBottom: "0.6rem",
+                      borderBottom: ii < group.items.length - 1 ? "1px solid var(--line)" : "none",
+                    }}>
+                      <span style={{ fontSize: "0.88rem", color: "var(--ink)", fontWeight: 400 }}>{item.name}</span>
+                      <span style={{ fontSize: "0.72rem", color: "var(--accent)", letterSpacing: "0.04em" }}>{item.level}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                // ── SKILL TAGS ──
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                  {group.items.map((item, ii) => (
+                    <span key={ii} style={{
+                      padding: "0.35rem 0.9rem",
+                      border: "1px solid var(--accent-light)",
+                      background: "var(--accent-pale)",
+                      fontSize: "0.78rem",
+                      color: "var(--ink)",
+                      borderRadius: "2px",
+                      letterSpacing: "0.02em",
+                    }}>{item.name}</span>
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
