@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { content } from "./content.js";
+import fotoAndrea from "./foto.JPEG";
 
 // ── THEME ────────────────────────────────────────────────────────────────────
 const theme = `
@@ -165,7 +166,7 @@ function Hero({ t, lang }) {
     <section id="hero" className="hero-grid" style={{
       minHeight: "100vh", display: "grid",
       gridTemplateColumns: "1fr 1fr", alignItems: "center",
-      padding: "5rem 4rem 4rem", gap: "4rem",
+      padding: "8rem 4rem 4rem", gap: "4rem",
       background: "linear-gradient(135deg, var(--bg) 60%, var(--accent-pale) 100%)",
     }}>
       <div style={{ animation: "fadeUp 1s ease both" }}>
@@ -287,7 +288,7 @@ function About({ t }) {
         </div>
         <div ref={ref2} style={{ opacity: v2 ? 1 : 0, transform: v2 ? "none" : "translateY(20px)", transition: "all 0.7s 0.15s ease" }}>
           <img
-            src="https://raw.githubusercontent.com/andreamili37/andreamili.github.io/gh-pages/foto.JPEG"
+            src={fotoAndrea}
             alt="Andrea Mili"
             style={{
               width: "100%",
@@ -613,11 +614,7 @@ function Education({ t }) {
               position: "relative", overflow: "hidden",
               opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)",
               transition: `all 0.6s ${i * 0.1}s ease`,
-            }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.transform = visible ? "none" : "translateY(20px)"; 
-              }}           
-            >
+            }}>
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(to right, var(--accent), transparent)" }} />
               <div style={{ fontSize: "0.67rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.45rem" }}>{item.year}</div>
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.2rem", marginBottom: "0.25rem" }}>{item.degree}</div>
@@ -722,4 +719,3 @@ export default function App() {
     </>
   );
 }
- 
