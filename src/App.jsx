@@ -166,7 +166,7 @@ function Hero({ t, lang }) {
     <section id="hero" className="hero-grid" style={{
       minHeight: "100vh", display: "grid",
       gridTemplateColumns: "1fr 1fr", alignItems: "center",
-      padding: "8rem 4rem 4rem", gap: "4rem",
+      padding: "5rem 4rem 4rem", gap: "4rem",
       background: "linear-gradient(135deg, var(--bg) 60%, var(--accent-pale) 100%)",
     }}>
       <div style={{ animation: "fadeUp 1s ease both" }}>
@@ -361,7 +361,6 @@ function Skills({ t }) {
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.15rem", fontStyle: "italic", marginBottom: "1.5rem" }}>{group.title}</div>
 
               {langs ? (
-                // ── LANGUAGE LIST ──
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                   {group.items.map((item, ii) => (
                     <div key={ii} style={{
@@ -375,18 +374,16 @@ function Skills({ t }) {
                   ))}
                 </div>
               ) : (
-                // ── SKILL TAGS ──
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                   {group.items.map((item, ii) => (
-                    <span key={ii} style={{
-                      padding: "0.35rem 0.9rem",
-                      border: "1px solid var(--accent-light)",
-                      background: "var(--accent-pale)",
-                      fontSize: "0.78rem",
-                      color: "var(--ink)",
-                      borderRadius: "2px",
-                      letterSpacing: "0.02em",
-                    }}>{item.name}</span>
+                    <div key={ii} style={{
+                      display: "flex", justifyContent: "space-between", alignItems: "baseline",
+                      paddingBottom: "0.6rem",
+                      borderBottom: ii < group.items.length - 1 ? "1px solid var(--line)" : "none",
+                    }}>
+                      <span style={{ fontSize: "0.88rem", color: "var(--ink)", fontWeight: 400 }}>{item.name}</span>
+                      <span style={{ fontSize: "0.72rem", color: "var(--accent)", letterSpacing: "0.04em" }}>{item.level}</span>
+                    </div>
                   ))}
                 </div>
               )}
@@ -614,7 +611,10 @@ function Education({ t }) {
               position: "relative", overflow: "hidden",
               opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)",
               transition: `all 0.6s ${i * 0.1}s ease`,
-            }}>
+            }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.transform = "none"; }}
+            >
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(to right, var(--accent), transparent)" }} />
               <div style={{ fontSize: "0.67rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.45rem" }}>{item.year}</div>
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.2rem", marginBottom: "0.25rem" }}>{item.degree}</div>
