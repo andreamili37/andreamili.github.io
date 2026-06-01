@@ -165,7 +165,7 @@ function Hero({ t, lang }) {
     <section id="hero" className="hero-grid" style={{
       minHeight: "100vh", display: "grid",
       gridTemplateColumns: "1fr 1fr", alignItems: "center",
-      padding: "8rem 4rem 4rem", gap: "4rem",
+      padding: "5rem 4rem 4rem", gap: "4rem",
       background: "linear-gradient(135deg, var(--bg) 60%, var(--accent-pale) 100%)",
     }}>
       <div style={{ animation: "fadeUp 1s ease both" }}>
