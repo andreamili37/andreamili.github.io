@@ -97,6 +97,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
     { key: "experience", href: "#experience" },
     { key: "skills", href: "#skills" },
     { key: "projects", href: "#projects" },
+    { key: "sideprojects", href: "#sideprojects" },
     { key: "education", href: "#education" },
     { key: "contact", href: "#contatti" },
   ];
@@ -449,6 +450,26 @@ function Projects({ t, setPage, setCurrentProjectId }) {
   );
 }
 
+// ── SIDE PROJECTS ─────────────────────────────────────────────────────────────
+function SideProjects({ t, setPage, setCurrentProjectId }) {
+  const p = t.sideProjects;
+  const handleOpen = (project) => {
+    setCurrentProjectId(project.id);
+    setPage("project");
+    window.scrollTo(0, 0);
+  };
+  return (
+    <section id="sideprojects" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
+      <SectionHeader num={p.sectionNum} title={p.sectionTitle} />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.8rem" }}>
+        {p.items.map((proj, i) => (
+          <ProjectCard key={proj.id} project={proj} cta={p.cta} onOpen={handleOpen} index={i} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 // ── PROJECT PAGE ─────────────────────────────────────────────────────────────
 function ProjectPage({ project, t, setPage }) {
   useEffect(() => { window.scrollTo(0, 0); }, [project]);
@@ -564,14 +585,14 @@ function ProjectPage({ project, t, setPage }) {
 function Education({ t }) {
   const e = t.education;
   return (
-    <section id="education" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
+    <section id="education" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
       <SectionHeader num={e.sectionNum} title={e.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1.8rem" }}>
         {e.items.map((item, i) => {
           const [ref, visible] = useReveal();
           return (
             <div key={i} ref={ref} style={{
-              padding: "2rem", border: "1px solid var(--line)", background: "var(--bg)",
+              padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)",
               position: "relative", overflow: "hidden",
               opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)",
               transition: `all 0.6s ${i * 0.1}s ease`,
@@ -652,7 +673,7 @@ export default function App() {
   const [currentProjectId, setCurrentProjectId] = useState(null);
   const t = content[lang];
   const currentProject = currentProjectId
-    ? (t.projects.items.find(p => p.id === currentProjectId) || null)
+    ? ([...t.projects.items, ...t.sideProjects.items].find(p => p.id === currentProjectId) || null)
     : null;
 
   return (
@@ -666,6 +687,7 @@ export default function App() {
           <Experience t={t} />
           <Skills t={t} />
           <Projects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
+          <SideProjects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
           <Education t={t} />
           <Contact t={t} />
           <Footer t={t} />
