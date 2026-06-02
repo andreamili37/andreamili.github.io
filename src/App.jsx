@@ -162,13 +162,6 @@ function Nav({ lang, setLang, page, setPage, t }) {
 // ── HERO ─────────────────────────────────────────────────────────────────────
 function Hero({ t, lang }) {
   const h = t.hero;
-
-  const careerSteps = [
-    { company: "TCS", period: "2021" },
-    { company: "KPMG", period: "2022–2024" },
-    { company: "Deloitte", period: "2025–" },
-  ];
-
   return (
     <section id="hero" className="hero-grid" style={{
       minHeight: "100vh", display: "grid",
@@ -233,28 +226,13 @@ function Hero({ t, lang }) {
             border: "1px solid var(--accent-light)", zIndex: -1,
           }} />
 
-          {/* ── CAREER TIMELINE ── */}
-          <div style={{ marginBottom: "2rem" }}>
-            <div style={{ fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem" }}>Career Path</div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0" }}>
-              {careerSteps.map((step, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", flex: i < careerSteps.length - 1 ? 1 : "none" }}>
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <div style={{
-                      width: "8px", height: "8px", borderRadius: "50%",
-                      background: i === careerSteps.length - 1 ? "var(--accent)" : "var(--accent-light)",
-                      border: "2px solid var(--accent)",
-                      marginBottom: "0.4rem",
-                    }} />
-                    <div style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--ink)", whiteSpace: "nowrap" }}>{step.company}</div>
-                    <div style={{ fontSize: "0.65rem", color: "var(--ink-muted)", whiteSpace: "nowrap" }}>{step.period}</div>
-                  </div>
-                  {i < careerSteps.length - 1 && (
-                    <div style={{ flex: 1, height: "1px", background: "var(--accent-light)", margin: "0 0.5rem", marginBottom: "1.5rem" }} />
-                  )}
-                </div>
-              ))}
-            </div>
+          {/* ── LOCATION ── */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.8rem" }}>
+            <svg width="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <span style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>Munich, Germany</span>
           </div>
 
           <div style={{ height: "1px", background: "var(--line)", margin: "0 0 1.8rem" }} />
@@ -378,15 +356,12 @@ function Experience({ t }) {
 // ── SKILLS ───────────────────────────────────────────────────────────────────
 function Skills({ t }) {
   const s = t.skills;
-  const isLanguages = (group) => group.items && group.items[0] && "level" in group.items[0];
-
   return (
     <section id="skills" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={s.sectionNum} title={s.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.8rem" }}>
         {s.groups.map((group, gi) => {
           const [ref, visible] = useReveal();
-          const langs = isLanguages(group);
           return (
             <div key={gi} ref={ref} style={{
               padding: "2rem", border: "1px solid var(--line)", background: "var(--bg)",
@@ -483,6 +458,14 @@ function Projects({ t, setPage, setCurrentProjectId }) {
           <ProjectCard key={proj.id} project={proj} cta={p.cta} onOpen={handleOpen} index={i} />
         ))}
       </div>
+      {p.projectsNote && (
+        <p style={{
+          marginTop: "2.5rem", fontSize: "0.85rem", color: "var(--ink-muted)",
+          fontStyle: "italic", lineHeight: 1.7, textAlign: "center",
+        }}>
+          {p.projectsNote}
+        </p>
+      )}
     </section>
   );
 }

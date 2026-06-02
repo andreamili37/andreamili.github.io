@@ -13,7 +13,7 @@ export const content = {
       label: "Portfolio · CV Interattivo",
       name: "Andrea",
       surname: "Mili",
-      role: "ESG & Sustainability Specialist · Monaco di Baviera, Germania",
+      role: "ESG & Sustainability Specialist",
       cta: "Contattami",
       downloadCv: "Scarica Curriculum Vitae",
       stats: {
@@ -245,7 +245,7 @@ export const content = {
       label: "Portfolio · Interactive CV",
       name: "Andrea",
       surname: "Mili",
-      role: "ESG & Sustainability Specialist · Munich, Germany",
+      role: "ESG & Sustainability Specialist",
       cta: "Get in touch",
       downloadCv: "Download CV",
       stats: {
@@ -477,7 +477,7 @@ export const content = {
       label: "Portfolio · Interaktiver Lebenslauf",
       name: "Andrea",
       surname: "Mili",
-      role: "ESG- und Nachhaltigkeitsexperte · München, Deutschland",
+      role: "ESG- und Nachhaltigkeitsexperte",
       cta: "Kontakt aufnehmen",
       downloadCv: "Lebenslauf herunterladen",
       stats: {
