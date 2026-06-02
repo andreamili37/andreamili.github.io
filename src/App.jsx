@@ -227,12 +227,12 @@ function Hero({ t, lang }) {
           }} />
           <div style={{ marginBottom: "1.8rem" }}>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1rem" }}>
-              <span style={{ fontFamily: "var(--serif)", fontSize: "2.8rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.years.num}</span>
-              <span style={{ fontSize: "0.8rem", color: "var(--ink-muted)" }}>{h.stats.years.label}</span>
+              <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.years.num}</span>
+              <span style={{ fontSize: "1rem", color: "var(--ink-muted)" }}>{h.stats.years.label}</span>
             </div>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem" }}>
-              <span style={{ fontFamily: "var(--serif)", fontSize: "2.8rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.projects.num}</span>
-              <span style={{ fontSize: "0.8rem", color: "var(--ink-muted)" }}>{h.stats.projects.label}</span>
+              <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.projects.num}</span>
+              <span style={{ fontSize: "1rem", color: "var(--ink-muted)" }}>{h.stats.projects.label}</span>
             </div>
           </div>
           <div style={{ height: "1px", background: "var(--line)", margin: "1.5rem 0" }} />
@@ -674,7 +674,7 @@ function Contact({ t }) {
 function Footer({ t }) {
   return (
     <footer style={{
-      background: "var(--dark)", borderTop: "1px solid rgba(255,255,255,0.07)",
+      background: "var(--dark)",
       padding: "2.5rem 4rem", display: "flex", flexDirection: "column", gap: "1.5rem",
       flexWrap: "wrap",
     }}>
@@ -682,7 +682,6 @@ function Footer({ t }) {
         <p style={{
           fontSize: "0.7rem", color: "rgba(247,245,240,0.35)",
           lineHeight: 1.7, maxWidth: "100%",
-          borderTop: "1px solid rgba(255,255,255,0.07)",
           paddingTop: "1.5rem",
         }}>
           {t.siteDisclaimer}
