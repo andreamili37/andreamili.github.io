@@ -660,7 +660,7 @@ function Contact({ t }) {
               onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--bg2)"; e.currentTarget.style.background = "rgba(74,127,191,0.08)"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; e.currentTarget.style.color = "var(--dark-muted)"; e.currentTarget.style.background = "transparent"; }}
             >
-              <span style={{ opacity: 0.6 }}>{contactIcons[link.type]}</span>
+              <span style={{ opacity: 0.6, display: "flex", alignItems: "center" }}>{contactIcons[link.type]}</span>
               {link.label}
             </a>
           ))}
