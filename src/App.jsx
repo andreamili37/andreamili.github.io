@@ -328,7 +328,7 @@ function Experience({ t }) {
               <div style={{ fontSize: "0.68rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.35rem" }}>{item.period}</div>
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.35rem", fontWeight: 400, marginBottom: "0.2rem" }}>{item.role}</div>
               <div style={{ fontSize: "0.82rem", color: "var(--ink-muted)", marginBottom: "0.8rem" }}>{item.company}</div>
-              <div style={{ fontSize: "0.86rem", color: "var(--ink-muted)", lineHeight: 1.8, maxWidth: "60ch" }}>{item.desc}</div>
+              <div style={{ fontSize: "0.86rem", color: "var(--ink-muted)", lineHeight: 1.8, maxWidth: "85ch" }}>{item.desc}</div>
             </div>
           );
         })}
@@ -345,7 +345,7 @@ function Skills({ t }) {
   return (
     <section id="skills" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={s.sectionNum} title={s.sectionTitle} />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "1.8rem" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.8rem" }}>
         {s.groups.map((group, gi) => {
           const [ref, visible] = useReveal();
           const langs = isLanguages(group);
@@ -681,7 +681,7 @@ function Footer({ t }) {
       {t.siteDisclaimer && (
         <p style={{
           fontSize: "0.7rem", color: "rgba(247,245,240,0.35)",
-          lineHeight: 1.7, maxWidth: "80ch",
+          lineHeight: 1.7, maxWidth: "100%",
           borderTop: "1px solid rgba(255,255,255,0.07)",
           paddingTop: "1.5rem",
         }}>
