@@ -162,6 +162,13 @@ function Nav({ lang, setLang, page, setPage, t }) {
 // ── HERO ─────────────────────────────────────────────────────────────────────
 function Hero({ t, lang }) {
   const h = t.hero;
+
+  const careerSteps = [
+    { company: "TCS", period: "2021" },
+    { company: "KPMG", period: "2022–2024" },
+    { company: "Deloitte", period: "2025–" },
+  ];
+
   return (
     <section id="hero" className="hero-grid" style={{
       minHeight: "100vh", display: "grid",
@@ -225,17 +232,48 @@ function Hero({ t, lang }) {
             width: "100%", height: "100%",
             border: "1px solid var(--accent-light)", zIndex: -1,
           }} />
-          <div style={{ marginBottom: "1.8rem" }}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1rem" }}>
-              <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.years.num}</span>
-              <span style={{ fontSize: "1rem", color: "var(--ink-muted)" }}>{h.stats.years.label}</span>
-            </div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem" }}>
-              <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.projects.num}</span>
-              <span style={{ fontSize: "1rem", color: "var(--ink-muted)" }}>{h.stats.projects.label}</span>
+
+          {/* ── CAREER TIMELINE ── */}
+          <div style={{ marginBottom: "2rem" }}>
+            <div style={{ fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem" }}>Career Path</div>
+            <div style={{ display: "flex", alignItems: "center", gap: "0" }}>
+              {careerSteps.map((step, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", flex: i < careerSteps.length - 1 ? 1 : "none" }}>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    <div style={{
+                      width: "8px", height: "8px", borderRadius: "50%",
+                      background: i === careerSteps.length - 1 ? "var(--accent)" : "var(--accent-light)",
+                      border: "2px solid var(--accent)",
+                      marginBottom: "0.4rem",
+                    }} />
+                    <div style={{ fontSize: "0.78rem", fontWeight: 500, color: "var(--ink)", whiteSpace: "nowrap" }}>{step.company}</div>
+                    <div style={{ fontSize: "0.65rem", color: "var(--ink-muted)", whiteSpace: "nowrap" }}>{step.period}</div>
+                  </div>
+                  {i < careerSteps.length - 1 && (
+                    <div style={{ flex: 1, height: "1px", background: "var(--accent-light)", margin: "0 0.5rem", marginBottom: "1.5rem" }} />
+                  )}
+                </div>
+              ))}
             </div>
           </div>
-          <div style={{ height: "1px", background: "var(--line)", margin: "1.5rem 0" }} />
+
+          <div style={{ height: "1px", background: "var(--line)", margin: "0 0 1.8rem" }} />
+
+          {/* ── STATS ── */}
+          <div style={{ display: "flex", gap: "2rem", marginBottom: "1.8rem" }}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.4rem" }}>
+              <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.years.num}</span>
+              <span style={{ fontSize: "0.85rem", color: "var(--ink-muted)", lineHeight: 1.3 }}>{h.stats.years.label}</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.4rem" }}>
+              <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: "var(--accent)", lineHeight: 1 }}>{h.stats.projects.num}</span>
+              <span style={{ fontSize: "0.85rem", color: "var(--ink-muted)", lineHeight: 1.3 }}>{h.stats.projects.label}</span>
+            </div>
+          </div>
+
+          <div style={{ height: "1px", background: "var(--line)", margin: "0 0 1.5rem" }} />
+
+          {/* ── TAGS ── */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
             {h.tags.map(tag => (
               <span key={tag} style={{
@@ -359,34 +397,18 @@ function Skills({ t }) {
               onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.transform = visible ? "none" : "translateY(20px)"; }}
             >
               <div style={{ fontFamily: "var(--serif)", fontSize: "1.15rem", fontStyle: "italic", marginBottom: "1.5rem" }}>{group.title}</div>
-
-              {langs ? (
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                  {group.items.map((item, ii) => (
-                    <div key={ii} style={{
-                      display: "flex", justifyContent: "space-between", alignItems: "baseline",
-                      paddingBottom: "0.6rem",
-                      borderBottom: ii < group.items.length - 1 ? "1px solid var(--line)" : "none",
-                    }}>
-                      <span style={{ fontSize: "0.88rem", color: "var(--ink)", fontWeight: 400 }}>{item.name}</span>
-                      <span style={{ fontSize: "0.72rem", color: "var(--accent)", letterSpacing: "0.04em" }}>{item.level}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                  {group.items.map((item, ii) => (
-                    <div key={ii} style={{
-                      display: "flex", justifyContent: "space-between", alignItems: "baseline",
-                      paddingBottom: "0.6rem",
-                      borderBottom: ii < group.items.length - 1 ? "1px solid var(--line)" : "none",
-                    }}>
-                      <span style={{ fontSize: "0.88rem", color: "var(--ink)", fontWeight: 400 }}>{item.name}</span>
-                      <span style={{ fontSize: "0.72rem", color: "var(--accent)", letterSpacing: "0.04em" }}>{item.level}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                {group.items.map((item, ii) => (
+                  <div key={ii} style={{
+                    display: "flex", justifyContent: "space-between", alignItems: "baseline",
+                    paddingBottom: "0.6rem",
+                    borderBottom: ii < group.items.length - 1 ? "1px solid var(--line)" : "none",
+                  }}>
+                    <span style={{ fontSize: "0.88rem", color: "var(--ink)", fontWeight: 400 }}>{item.name}</span>
+                    <span style={{ fontSize: "0.72rem", color: "var(--accent)", letterSpacing: "0.04em" }}>{item.level}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           );
         })}
