@@ -263,6 +263,14 @@ function Hero({ t, lang }) {
           </div>
         </div>
       </div>
+      {p.projectsNote && (
+        <p style={{
+          marginTop: "2.5rem", fontSize: "0.85rem", color: "var(--ink-muted)",
+          fontStyle: "italic", lineHeight: 1.7, textAlign: "center",
+        }}>
+          {p.projectsNote}
+        </p>
+      )}
     </section>
   );
 }

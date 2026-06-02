@@ -107,6 +107,7 @@ export const content = {
       sectionNum: "04",
       sectionTitle: "Progetti",
       cta: "Scopri il progetto",
+      projectsNote: "Questi sono solo alcuni progetti selezionati. Nel corso della mia carriera ho avuto l'opportunità di contribuire a molti altri progetti in ambiti diversi.",
       items: [
         {
           id: "csrd-reporting",
@@ -339,6 +340,7 @@ export const content = {
       sectionNum: "04",
       sectionTitle: "Projects",
       cta: "Explore project",
+      projectsNote: "These are a selection of projects I have worked on. Throughout my career I have contributed to many others across a wide range of topics and industries.",
       items: [
         {
           id: "csrd-reporting",
@@ -571,6 +573,7 @@ export const content = {
       sectionNum: "04",
       sectionTitle: "Projekte",
       cta: "Projekt erkunden",
+      projectsNote: "Dies ist eine Auswahl der Projekte, an denen ich mitgewirkt habe. Im Laufe meiner Karriere habe ich zu vielen weiteren Projekten in verschiedenen Themen und Branchen beigetragen.",
       items: [
         {
           id: "csrd-reporting",
