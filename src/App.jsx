@@ -54,8 +54,8 @@ function Nav({ lang, setLang, page, setPage, t }) {
   const navLinks = [
     { key: "about", href: "#about" }, { key: "experience", href: "#experience" },
     { key: "skills", href: "#skills" }, { key: "deepDive", href: "#deepdive" },
-    { key: "projects", href: "#projects" }, { key: "sideprojects", href: "#sideprojects" },
-    { key: "education", href: "#education" }, { key: "contact", href: "#contatti" },
+    { key: "projects", href: "#projects" }, { key: "education", href: "#education" },
+    { key: "sideprojects", href: "#sideprojects" }, { key: "contact", href: "#contatti" },
   ];
   const handleLogoClick = () => { setPage("home"); window.scrollTo(0, 0); };
   return (
@@ -119,9 +119,7 @@ function Hero({ t, lang }) {
           </div>
           <div style={{ height: "1px", background: "var(--line)", margin: "0 0 1.5rem" }} />
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.45rem" }}>
-            {h.tags.map(tag => (
-              <span key={tag} style={{ padding: "0.28rem 0.8rem", border: "1px solid var(--line)", fontSize: "0.72rem", letterSpacing: "0.05em", color: "var(--ink-muted)", background: "var(--bg)" }}>{tag}</span>
-            ))}
+            {h.tags.map(tag => (<span key={tag} style={{ padding: "0.28rem 0.8rem", border: "1px solid var(--line)", fontSize: "0.72rem", letterSpacing: "0.05em", color: "var(--ink-muted)", background: "var(--bg)" }}>{tag}</span>))}
           </div>
         </div>
       </div>
@@ -149,9 +147,7 @@ function About({ t }) {
       <SectionHeader num={a.sectionNum} title={a.sectionTitle} />
       <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: "5rem", alignItems: "start" }}>
         <div ref={ref1} style={{ opacity: v1 ? 1 : 0, transform: v1 ? "none" : "translateY(20px)", transition: "all 0.7s ease" }}>
-          {a.paragraphs.map((p, i) => (
-            <p key={i} style={{ fontSize: "1rem", color: "var(--ink-muted)", marginBottom: "1.2rem", lineHeight: 1.85 }} dangerouslySetInnerHTML={{ __html: p.replace(/<strong>/g, '<strong style="color:var(--ink);font-weight:500">') }} />
-          ))}
+          {a.paragraphs.map((p, i) => (<p key={i} style={{ fontSize: "1rem", color: "var(--ink-muted)", marginBottom: "1.2rem", lineHeight: 1.85 }} dangerouslySetInnerHTML={{ __html: p.replace(/<strong>/g, '<strong style="color:var(--ink);font-weight:500">') }} />))}
         </div>
         <div ref={ref2} style={{ opacity: v2 ? 1 : 0, transform: v2 ? "none" : "translateY(20px)", transition: "all 0.7s 0.15s ease" }}>
           <img src={fotoAndrea} alt="Andrea Mili" style={{ width: "100%", maxWidth: "400px", display: "block", border: "1px solid var(--line)", boxShadow: "0 8px 40px rgba(74,127,191,0.1)" }} />
@@ -212,7 +208,6 @@ function Skills({ t }) {
   );
 }
 
-// ── DEEP DIVE ─────────────────────────────────────────────────────────────────
 function DeepDive({ t, setPage, setCurrentDeepDiveId }) {
   const d = t.deepDive;
   const handleOpen = (item) => { setCurrentDeepDiveId(item.id); setPage("deepdive"); window.scrollTo(0, 0); };
@@ -225,7 +220,7 @@ function DeepDive({ t, setPage, setCurrentDeepDiveId }) {
           const [hovered, setHovered] = useState(false);
           return (
             <div key={item.id} ref={ref} onClick={() => handleOpen(item)} style={{ border: `1px solid ${hovered ? "var(--accent)" : "var(--line)"}`, background: "var(--surface)", cursor: "pointer", transform: visible ? (hovered ? "translateY(-6px)" : "none") : "translateY(20px)", opacity: visible ? 1 : 0, transition: `all 0.5s ${i * 0.1}s ease`, overflow: "hidden" }} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-              <div style={{ height: "120px", background: hovered ? "var(--dark)" : "var(--accent-pale)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", transition: "background 0.3s" }}>
+              <div style={{ height: "120px", background: hovered ? "var(--dark)" : "var(--accent-pale)", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.3s" }}>
                 <span style={{ fontFamily: "var(--serif)", fontSize: "3.5rem", fontWeight: 300, color: hovered ? "rgba(255,255,255,0.8)" : "var(--accent)", transition: "color 0.3s" }}>{item.symbol}</span>
               </div>
               <div style={{ padding: "1.6rem" }}>
@@ -247,7 +242,6 @@ function DeepDive({ t, setPage, setCurrentDeepDiveId }) {
   );
 }
 
-// ── DEEP DIVE PAGE ────────────────────────────────────────────────────────────
 function DeepDivePage({ item, t, setPage }) {
   useEffect(() => { window.scrollTo(0, 0); }, [item]);
   if (!item) return null;
@@ -272,15 +266,9 @@ function DeepDivePage({ item, t, setPage }) {
           <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{item.fullDesc}</p>
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Highlights</h2>
           <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-            {item.highlights.map((h, i) => (
-              <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "1rem", fontSize: "0.9rem", color: "var(--ink-muted)" }}>
-                <span style={{ color: "var(--accent)", fontSize: "1.2rem", lineHeight: 1.2, flexShrink: 0 }}>—</span>{h}
-              </li>
-            ))}
+            {item.highlights.map((h, i) => (<li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "1rem", fontSize: "0.9rem", color: "var(--ink-muted)" }}><span style={{ color: "var(--accent)", fontSize: "1.2rem", lineHeight: 1.2, flexShrink: 0 }}>—</span>{h}</li>))}
           </ul>
-          {item.disclaimer && (
-            <p style={{ marginTop: "2rem", padding: "1rem 1.5rem", borderLeft: "2px solid var(--accent-light)", fontSize: "0.78rem", color: "var(--ink-muted)", fontStyle: "italic", lineHeight: 1.8, background: "var(--bg)" }}>{item.disclaimer}</p>
-          )}
+          {item.disclaimer && (<p style={{ marginTop: "2rem", padding: "1rem 1.5rem", borderLeft: "2px solid var(--accent-light)", fontSize: "0.78rem", color: "var(--ink-muted)", fontStyle: "italic", lineHeight: 1.8, background: "var(--bg)" }}>{item.disclaimer}</p>)}
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           <div style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)" }}>
@@ -327,10 +315,79 @@ function Projects({ t, setPage, setCurrentProjectId }) {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.8rem" }}>
         {p.items.map((proj, i) => (<ProjectCard key={proj.id} project={proj} cta={p.cta} onOpen={handleOpen} index={i} />))}
       </div>
-      {p.projectsNote && (
-        <p style={{ marginTop: "2.5rem", fontSize: "0.85rem", color: "var(--ink-muted)", fontStyle: "italic", lineHeight: 1.7, textAlign: "center" }}>{p.projectsNote}</p>
-      )}
+      {p.projectsNote && (<p style={{ marginTop: "2.5rem", fontSize: "0.85rem", color: "var(--ink-muted)", fontStyle: "italic", lineHeight: 1.7, textAlign: "center" }}>{p.projectsNote}</p>)}
     </section>
+  );
+}
+
+function Education({ t, setPage, setCurrentEduId }) {
+  const e = t.education;
+  const handleOpen = (item) => { setCurrentEduId(item.id); setPage("education"); window.scrollTo(0, 0); };
+  return (
+    <section id="education" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
+      <SectionHeader num={e.sectionNum} title={e.sectionTitle} />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "1.8rem" }}>
+        {e.items.map((item, i) => {
+          const [ref, visible] = useReveal();
+          const [hovered, setHovered] = useState(false);
+          return (
+            <div key={item.id} ref={ref} onClick={() => handleOpen(item)} style={{ border: `1px solid ${hovered ? "var(--accent)" : "var(--line)"}`, background: "var(--surface)", cursor: "pointer", position: "relative", overflow: "hidden", transform: visible ? (hovered ? "translateY(-6px)" : "none") : "translateY(20px)", opacity: visible ? 1 : 0, transition: `all 0.6s ${i * 0.1}s ease` }} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(to right, var(--accent), transparent)" }} />
+              <div style={{ padding: "2rem" }}>
+                <div style={{ fontSize: "0.67rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.45rem" }}>{item.year}</div>
+                <div style={{ fontFamily: "var(--serif)", fontSize: "1.2rem", marginBottom: "0.25rem" }}>{item.degree}</div>
+                <div style={{ fontSize: "0.82rem", color: "var(--ink-muted)", marginBottom: "0.7rem" }}>{item.school}</div>
+                <div style={{ fontSize: "0.78rem", color: "var(--ink-muted)", fontStyle: "italic", marginBottom: "1rem" }}>{item.note}</div>
+                <div style={{ fontSize: "0.73rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                  {e.cta}<svg width="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function EducationPage({ item, t, setPage }) {
+  useEffect(() => { window.scrollTo(0, 0); }, [item]);
+  if (!item) return null;
+  return (
+    <div style={{ minHeight: "100vh", paddingTop: "6rem", background: "var(--bg)" }}>
+      <div className="back-btn" style={{ padding: "2rem 4rem 0" }}>
+        <button onClick={() => setPage("home")} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", background: "none", border: "none", cursor: "pointer", fontFamily: "var(--sans)" }}>{t.education.backToEducation}</button>
+      </div>
+      <div className="project-banner" style={{ margin: "2rem 4rem", background: "linear-gradient(135deg, var(--accent-pale), var(--accent-light))", border: "1px solid var(--line)", padding: "4rem", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2rem" }}>
+        <div>
+          <div style={{ fontSize: "0.68rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.5rem" }}>{item.year}</div>
+          <h1 style={{ fontFamily: "var(--serif)", fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 300, marginBottom: "0.5rem" }}>{item.degree}</h1>
+          <p style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>{item.school}</p>
+        </div>
+      </div>
+      <div className="project-content" style={{ padding: "0 4rem 6rem", display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: "4rem", alignItems: "start" }}>
+        <div>
+          <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Overview</h2>
+          <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{item.fullDesc}</p>
+          <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Thesis / Final Project</h2>
+          <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{item.thesis}</p>
+          <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Extracurricular</h2>
+          <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9 }}>{item.extracurricular}</p>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+          <div style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)" }}>
+            <div style={{ fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "1rem" }}>Main Subjects</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+              {item.subjects.map(s => (<span key={s} style={{ padding: "0.35rem 0.9rem", border: "1px solid var(--line)", fontSize: "0.78rem", color: "var(--ink-muted)", background: "var(--bg)" }}>{s}</span>))}
+            </div>
+          </div>
+          <div style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)" }}>
+            <div style={{ fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.5rem" }}>Final Grade</div>
+            <div style={{ fontFamily: "var(--serif)", fontSize: "1.1rem", color: "var(--ink)" }}>{item.note}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -338,7 +395,7 @@ function SideProjects({ t, setPage, setCurrentProjectId }) {
   const p = t.sideProjects;
   const handleOpen = (project) => { setCurrentProjectId(project.id); setPage("project"); window.scrollTo(0, 0); };
   return (
-    <section id="sideprojects" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--bg)" }}>
+    <section id="sideprojects" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={p.sectionNum} title={p.sectionTitle} />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "1.8rem" }}>
         {p.items.map((proj, i) => (<ProjectCard key={proj.id} project={proj} cta={p.cta} onOpen={handleOpen} index={i} />))}
@@ -370,15 +427,9 @@ function ProjectPage({ project, t, setPage }) {
           <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{project.fullDesc}</p>
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Highlights</h2>
           <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-            {project.highlights.map((h, i) => (
-              <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "1rem", fontSize: "0.9rem", color: "var(--ink-muted)" }}>
-                <span style={{ color: "var(--accent)", fontSize: "1.2rem", lineHeight: 1.2, flexShrink: 0 }}>—</span>{h}
-              </li>
-            ))}
+            {project.highlights.map((h, i) => (<li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "1rem", fontSize: "0.9rem", color: "var(--ink-muted)" }}><span style={{ color: "var(--accent)", fontSize: "1.2rem", lineHeight: 1.2, flexShrink: 0 }}>—</span>{h}</li>))}
           </ul>
-          {project.disclaimer && (
-            <p style={{ marginTop: "2rem", padding: "1rem 1.5rem", borderLeft: "2px solid var(--accent-light)", fontSize: "0.78rem", color: "var(--ink-muted)", fontStyle: "italic", lineHeight: 1.8, background: "var(--bg)" }}>{project.disclaimer}</p>
-          )}
+          {project.disclaimer && (<p style={{ marginTop: "2rem", padding: "1rem 1.5rem", borderLeft: "2px solid var(--accent-light)", fontSize: "0.78rem", color: "var(--ink-muted)", fontStyle: "italic", lineHeight: 1.8, background: "var(--bg)" }}>{project.disclaimer}</p>)}
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           <div style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)" }}>
@@ -396,29 +447,6 @@ function ProjectPage({ project, t, setPage }) {
         </div>
       </div>
     </div>
-  );
-}
-
-function Education({ t }) {
-  const e = t.education;
-  return (
-    <section id="education" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
-      <SectionHeader num={e.sectionNum} title={e.sectionTitle} />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1.8rem" }}>
-        {e.items.map((item, i) => {
-          const [ref, visible] = useReveal();
-          return (
-            <div key={i} ref={ref} style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--bg)", position: "relative", overflow: "hidden", opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)", transition: `all 0.6s ${i * 0.1}s ease` }} onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.transform = "translateY(-4px)"; }} onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--line)"; e.currentTarget.style.transform = "none"; }}>
-              <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: "linear-gradient(to right, var(--accent), transparent)" }} />
-              <div style={{ fontSize: "0.67rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.45rem" }}>{item.year}</div>
-              <div style={{ fontFamily: "var(--serif)", fontSize: "1.2rem", marginBottom: "0.25rem" }}>{item.degree}</div>
-              <div style={{ fontSize: "0.82rem", color: "var(--ink-muted)", marginBottom: "0.7rem" }}>{item.school}</div>
-              <div style={{ fontSize: "0.78rem", color: "var(--ink-muted)", fontStyle: "italic" }}>{item.note}</div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
   );
 }
 
@@ -444,8 +472,7 @@ function Contact({ t }) {
         <div ref={ref2} style={{ display: "flex", flexDirection: "column", gap: "0.9rem", opacity: v2 ? 1 : 0, transform: v2 ? "none" : "translateY(20px)", transition: "all 0.7s 0.15s ease" }}>
           {c.links.map((link, i) => (
             <a key={i} href={link.href} target={link.type === "linkedin" ? "_blank" : undefined} rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "1.1rem 1.4rem", border: "1px solid rgba(255,255,255,0.1)", color: "var(--dark-muted)", fontSize: "0.86rem", transition: "all 0.3s" }} onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--bg2)"; e.currentTarget.style.background = "rgba(74,127,191,0.08)"; }} onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; e.currentTarget.style.color = "var(--dark-muted)"; e.currentTarget.style.background = "transparent"; }}>
-              <span style={{ opacity: 0.6, display: "flex", alignItems: "center" }}>{contactIcons[link.type]}</span>
-              {link.label}
+              <span style={{ opacity: 0.6, display: "flex", alignItems: "center" }}>{contactIcons[link.type]}</span>{link.label}
             </a>
           ))}
         </div>
@@ -457,9 +484,7 @@ function Contact({ t }) {
 function Footer({ t }) {
   return (
     <footer style={{ background: "var(--dark)", padding: "2.5rem 4rem", display: "flex", flexDirection: "column", gap: "1.5rem", flexWrap: "wrap" }}>
-      {t.siteDisclaimer && (
-        <p style={{ fontSize: "0.7rem", color: "rgba(247,245,240,0.35)", lineHeight: 1.7, maxWidth: "100%", paddingTop: "1.5rem" }}>{t.siteDisclaimer}</p>
-      )}
+      {t.siteDisclaimer && (<p style={{ fontSize: "0.7rem", color: "rgba(247,245,240,0.35)", lineHeight: 1.7, maxWidth: "100%", paddingTop: "1.5rem" }}>{t.siteDisclaimer}</p>)}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
         <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.left}</span>
         <span style={{ fontSize: "0.72rem", color: "rgba(247,245,240,0.3)", letterSpacing: "0.06em" }}>{t.footer.right}</span>
@@ -473,14 +498,17 @@ export default function App() {
   const [page, setPage] = useState("home");
   const [currentProjectId, setCurrentProjectId] = useState(null);
   const [currentDeepDiveId, setCurrentDeepDiveId] = useState(null);
+  const [currentEduId, setCurrentEduId] = useState(null);
   const t = content[lang];
 
   const currentProject = currentProjectId
     ? ([...t.projects.items, ...t.sideProjects.items].find(p => p.id === currentProjectId) || null)
     : null;
-
   const currentDeepDive = currentDeepDiveId
     ? (t.deepDive.items.find(d => d.id === currentDeepDiveId) || null)
+    : null;
+  const currentEdu = currentEduId
+    ? (t.education.items.find(e => e.id === currentEduId) || null)
     : null;
 
   return (
@@ -495,21 +523,17 @@ export default function App() {
           <Skills t={t} />
           <DeepDive t={t} setPage={setPage} setCurrentDeepDiveId={setCurrentDeepDiveId} />
           <Projects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
+          <Education t={t} setPage={setPage} setCurrentEduId={setCurrentEduId} />
           <SideProjects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
-          <Education t={t} />
           <Contact t={t} />
           <Footer t={t} />
         </>
       ) : page === "project" ? (
-        <>
-          <ProjectPage project={currentProject} t={t} setPage={setPage} />
-          <Footer t={t} />
-        </>
+        <><ProjectPage project={currentProject} t={t} setPage={setPage} /><Footer t={t} /></>
       ) : page === "deepdive" ? (
-        <>
-          <DeepDivePage item={currentDeepDive} t={t} setPage={setPage} />
-          <Footer t={t} />
-        </>
+        <><DeepDivePage item={currentDeepDive} t={t} setPage={setPage} /><Footer t={t} /></>
+      ) : page === "education" ? (
+        <><EducationPage item={currentEdu} t={t} setPage={setPage} /><Footer t={t} /></>
       ) : null}
     </>
   );
