@@ -190,7 +190,7 @@ function Skills({ t }) {
   return (
     <section id="skills" className="section-pad" style={{ padding: "6rem 4rem", background: "var(--surface)" }}>
       <SectionHeader num={s.sectionNum} title={s.sectionTitle} />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.8rem" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.8rem" }}>
         {s.groups.map((group, gi) => {
           const [ref, visible] = useReveal();
           return (
