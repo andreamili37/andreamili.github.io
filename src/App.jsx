@@ -369,10 +369,8 @@ function EducationPage({ item, t, setPage }) {
         <div>
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Overview</h2>
           <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{item.fullDesc}</p>
-          <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Thesis / Final Project</h2>
-          <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{item.thesis}</p>
-          <h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Extracurricular</h2>
-          <p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9 }}>{item.extracurricular}</p>
+          {item.thesis && (<><h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Thesis / Final Project</h2><p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9, marginBottom: "2.5rem" }}>{item.thesis}</p></>)}
+          {item.extracurricular && (<><h2 style={{ fontFamily: "var(--serif)", fontSize: "1.5rem", fontWeight: 300, marginBottom: "1.2rem", color: "var(--ink)" }}>Extracurricular</h2><p style={{ fontSize: "1rem", color: "var(--ink-muted)", lineHeight: 1.9 }}>{item.extracurricular}</p></>)}
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           <div style={{ padding: "2rem", border: "1px solid var(--line)", background: "var(--surface)" }}>
