@@ -102,9 +102,15 @@ function Hero({ t, lang }) {
       <div className="hero-visual" style={{ animation: "fadeUp 1s 0.2s ease both" }}>
         <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "2.5rem", position: "relative", boxShadow: "0 8px 40px rgba(74,127,191,0.1)" }}>
           <div style={{ position: "absolute", top: "-8px", left: "-8px", width: "100%", height: "100%", border: "1px solid var(--accent-light)", zIndex: -1 }} />
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.8rem" }}>
-            <svg width="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            <span style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>Munich, Germany</span>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.8rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <svg width="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>Munich, Germany</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <svg width="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>BA Political Science; MSc Politics and Technology · Global MBA (in progress)</span>
+            </div>
           </div>
           <div style={{ height: "1px", background: "var(--line)", margin: "0 0 1.8rem" }} />
           <div style={{ display: "flex", gap: "2rem", marginBottom: "1.8rem" }}>
