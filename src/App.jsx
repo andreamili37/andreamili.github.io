@@ -55,7 +55,7 @@ function Nav({ lang, setLang, page, setPage, t }) {
     { key: "about", href: "#about" }, { key: "experience", href: "#experience" },
     { key: "skills", href: "#skills" }, { key: "deepDive", href: "#deepdive" },
     { key: "projects", href: "#projects" }, { key: "education", href: "#education" },
-    { key: "sideprojects", href: "#sideprojects" }, { key: "contact", href: "#contatti" },
+    { key: "contact", href: "#contatti" },
   ];
   const handleLogoClick = () => { setPage("home"); window.scrollTo(0, 0); };
   return (
@@ -522,7 +522,6 @@ export default function App() {
           <DeepDive t={t} setPage={setPage} setCurrentDeepDiveId={setCurrentDeepDiveId} />
           <Projects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
           <Education t={t} setPage={setPage} setCurrentEduId={setCurrentEduId} />
-          <SideProjects t={t} setPage={setPage} setCurrentProjectId={setCurrentProjectId} />
           <Contact t={t} />
           <Footer t={t} />
         </>
