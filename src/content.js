@@ -322,17 +322,18 @@ export const content = {
           title: "ESG & Sustainability",
           items: [
             { name: "EU ESG Regulations (CSRD, SFDR, EU Taxonomy)", level: "Expert" },
-            { name: "Sustainability Reporting", level: "Expert" },
-            { name: "Global ESG Regulations (ISSB, GRI, TCFD)", level: "Advanced" },
-            { name: "Financial Modelling & Valuation", level: "Advanced" },
-            { name: "M&A / Due Diligence", level: "Proficient" },
+            { name: "Climate and Biodiversity Planning", level: "Advanced" },
+            { name: "ESG Ratings (MSCI, Sustainalytics, EcoVadis)", level: "Advanced" },
+            { name: "Sustainable Finance Regulations (SFDR, EU Taxonomy)", level: "Advanced" },
+            { name: "Limited Assurance & ESG Auditing", level: "Proficient" },
+            { name: "Global ESG Regulations (ISSB, GRI, TCFD)", level: "Proficient" },
           ],
         },
         {
           title: "Tools & Software",
           items: [
             { name: "MS Office Suite (Excel, PowerPoint, Word)", level: "Expert" },
-            { name: "Generative AI (Claude, Microsoft Copilot)", level: "Expert" },
+            { name: "Generative AI (Claude, Microsoft Copilot)", level: "Advanced" },
             { name: "PowerBI", level: "Proficient" },
             { name: "Python (pandas, numpy)", level: "Proficient" },
             { name: "SQL", level: "Familiar" },
@@ -344,7 +345,9 @@ export const content = {
             { name: "Problem Solving", level: "Expert" },
             { name: "Stakeholder Management", level: "Expert" },
             { name: "Storytelling & Presentations", level: "Advanced" },
+            { name: "Analytical Thinking", level: "Advanced" },
             { name: "Teamwork", level: "Advanced" },
+            { name: "Cross-functional Collaboration", level: "Advanced" },
           ],
         },
         {

@@ -109,7 +109,7 @@ function Hero({ t, lang }) {
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
               <svg width="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              <span style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>BA Political Science; MSc Politics and Technology · Global MBA (in progress)</span>
+              <span style={{ fontSize: "0.9rem", color: "var(--ink-muted)" }}>BA; MSc; Global MBA (in progress)</span>
             </div>
           </div>
           <div style={{ height: "1px", background: "var(--line)", margin: "0 0 1.8rem" }} />
