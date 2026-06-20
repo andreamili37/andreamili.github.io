@@ -376,7 +376,7 @@ export const content = {
           period: "Jan 2025 — Present",
           role: "Senior Consultant Sustainable Finance & Public Sector",
           tags: ["CSRD", "ESRS", "Public Sector"],
-          desc: "Sustainable Finance and digitalisation of the public sector.",
+          desc: "Sustainable Finance and digitalisation of the public sector. Most of my time at Deloitte has been dedicated to auditing projects of sustainability reports for large financial institutions, based in Germany but with clients worldwide.",
           fullDesc: "Detailed description of the role to be completed.",
           highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
           skills: ["CSRD", "ESRS", "Sustainable Finance", "Public Sector"],
